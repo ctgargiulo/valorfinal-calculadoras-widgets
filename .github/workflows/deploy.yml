@@ -1,0 +1,28 @@
+name: Deploy para o WordPress.org
+
+# Publica no SVN do WordPress.org quando uma tag de versao (ex.: v1.0.1) e criada.
+# Requer dois secrets no repo: SVN_USERNAME e SVN_PASSWORD (conta wordpress.org).
+# Acao oficial mantida pela 10up.
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  deploy:
+    name: Publicar no WordPress.org
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: WordPress Plugin Deploy
+        # Fixado no commit SHA (imutavel) em vez de @stable: mitiga backdoor por
+        # comprometimento da tag/branch da action de terceiro. Atualizar o SHA
+        # conscientemente ao subir de versao.
+        uses: 10up/action-wordpress-plugin-deploy@54bd289b8525fd23a5c365ec369185f2966529c2 # stable
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: valorfinal-calculadoras-widgets

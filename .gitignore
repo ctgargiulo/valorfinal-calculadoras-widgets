@@ -1,0 +1,11 @@
+# Dependencias / build (este plugin e buildless, mas por seguranca)
+node_modules/
+vendor/
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+*.log
+*.zip
+.idea/
+.vscode/

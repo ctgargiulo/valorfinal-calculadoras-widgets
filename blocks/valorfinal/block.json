@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "valorfinal/widget",
+	"version": "1.0.0",
+	"title": "ValorFinal: widget",
+	"category": "embed",
+	"icon": "chart-line",
+	"description": "Tabela do Brasileirao, jogos de hoje, cotacao do dolar, Selic, Bitcoin, loterias e calculadoras do ValorFinal. Atualiza sozinho.",
+	"keywords": [ "valorfinal", "brasileirao", "dolar", "calculadora", "widget" ],
+	"textdomain": "valorfinal-calculadoras-widgets",
+	"supports": {
+		"html": false,
+		"align": [ "left", "center", "right", "wide" ]
+	},
+	"attributes": {
+		"widget":  { "type": "string", "default": "tabela-brasileirao" },
+		"slug":    { "type": "string", "default": "" },
+		"tema":    { "type": "string", "default": "light" },
+		"cor":     { "type": "string", "default": "" },
+		"largura": { "type": "string", "default": "padrao" },
+		"titulo":  { "type": "boolean", "default": true },
+		"credito": { "type": "boolean", "default": true }
+	},
+	"editorScript": "valorfinal-calculadoras-widgets-editor-script"
+}

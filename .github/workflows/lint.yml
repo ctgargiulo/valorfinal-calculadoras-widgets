@@ -1,0 +1,24 @@
+name: Lint
+
+# Valida a sintaxe PHP em varias versoes a cada push/PR. Usa a imagem oficial
+# do PHP (sem action de terceiro), entao nao ha dependencia externa para fixar.
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  php-syntax:
+    name: php -l (sintaxe)
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: [ '7.2', '8.2' ]
+    container: php:${{ matrix.php }}-cli
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Lint de sintaxe de todos os .php
+        run: |
+          set -e
+          find . -name '*.php' -print0 | xargs -0 -n1 -P4 php -l

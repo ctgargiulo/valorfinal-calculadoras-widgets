@@ -1,0 +1,16 @@
+# Arquivos que NAO entram no .zip publicado no WordPress.org
+# (a action 10up usa este arquivo para montar o pacote final).
+.git
+.github
+.gitignore
+.distignore
+.editorconfig
+README.md
+node_modules
+vendor
+*.zip
+*.log
+.DS_Store
+Thumbs.db
+.idea
+.vscode
