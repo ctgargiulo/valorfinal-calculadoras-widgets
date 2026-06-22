@@ -46,7 +46,7 @@ class VFCW_Widget extends WP_Widget {
 				'cor'     => isset( $instance['cor'] ) ? $instance['cor'] : '',
 				'largura' => isset( $instance['largura'] ) ? $instance['largura'] : 'padrao',
 				'titulo'  => isset( $instance['titulo'] ) ? $instance['titulo'] : '1',
-				'credito' => isset( $instance['credito'] ) ? $instance['credito'] : '1',
+				'credito' => isset( $instance['credito'] ) ? $instance['credito'] : '0',
 			)
 		);
 
@@ -71,7 +71,7 @@ class VFCW_Widget extends WP_Widget {
 		$cor     = isset( $instance['cor'] ) ? sanitize_hex_color( $instance['cor'] ) : '';
 		$largura = isset( $instance['largura'] ) ? sanitize_key( $instance['largura'] ) : 'padrao';
 		$titulo  = ! isset( $instance['titulo'] ) || vfcw_is_truthy( $instance['titulo'] );
-		$credito = ! isset( $instance['credito'] ) || vfcw_is_truthy( $instance['credito'] );
+		$credito = isset( $instance['credito'] ) && vfcw_is_truthy( $instance['credito'] );
 		?>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'widget' ) ); ?>"><?php esc_html_e( 'Widget', 'valorfinal-calculadoras-widgets' ); ?></label>
@@ -119,7 +119,7 @@ class VFCW_Widget extends WP_Widget {
 		</p>
 		<p>
 			<input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'credito' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'credito' ) ); ?>" value="1" <?php checked( $credito ); ?> />
-			<label for="<?php echo esc_attr( $this->get_field_id( 'credito' ) ); ?>"><?php esc_html_e( 'Mostrar o link de credito ao ValorFinal', 'valorfinal-calculadoras-widgets' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'credito' ) ); ?>"><?php esc_html_e( 'Exibir um credito ao ValorFinal (opcional). Ajuda muito o ValorFinal a continuar distribuindo os widgets de graca.', 'valorfinal-calculadoras-widgets' ); ?></label>
 		</p>
 		<?php
 	}

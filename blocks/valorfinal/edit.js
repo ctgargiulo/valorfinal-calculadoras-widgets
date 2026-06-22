@@ -5,7 +5,8 @@
  * wp.serverSideRender). O preview e renderizado pelo SERVIDOR (mesmo builder
  * seguro do front-end), entao o editor mostra exatamente o que sai publicado.
  *
- * Sem coleta de dados, sem chamadas externas: o preview vem do proprio WordPress.
+ * O seletor de widget e PESQUISAVEL (ComboboxControl): lista os widgets ao vivo
+ * e todas as calculadoras embedaveis. Sem coleta de dados, sem chamadas externas.
  */
 ( function ( wp ) {
 	'use strict';
@@ -14,47 +15,41 @@
 	var __ = wp.i18n.__;
 	var registerBlockType = wp.blocks.registerBlockType;
 	var InspectorControls = wp.blockEditor.InspectorControls;
-	var PanelBody = wp.components.PanelBody;
-	var SelectControl = wp.components.SelectControl;
-	var ToggleControl = wp.components.ToggleControl;
-	var TextControl = wp.components.TextControl;
+	var c = wp.components;
 	var ServerSideRender = wp.serverSideRender;
 
-	var DADOS = window.VFCW_DATA || { widgets: [] };
+	var DADOS = window.VFCW_DATA || { live: [], calcs: [] };
+	// Opcoes do seletor: widgets ao vivo primeiro, depois as calculadoras.
+	var OPCOES = ( DADOS.live || [] ).concat( DADOS.calcs || [] );
+
+	// Valor atual do combobox a partir dos atributos.
+	function valorAtual( a ) {
+		return 'calculadora' === a.widget ? 'calc:' + ( a.slug || '' ) : a.widget;
+	}
 
 	registerBlockType( 'valorfinal/widget', {
 		edit: function ( props ) {
 			var a = props.attributes;
 			var set = props.setAttributes;
 
-			var controls = [
-				el( SelectControl, {
-					key: 'widget',
-					label: __( 'Widget', 'valorfinal-calculadoras-widgets' ),
-					value: a.widget,
-					options: DADOS.widgets,
-					onChange: function ( v ) {
-						set( { widget: v } );
-					},
-				} ),
-			];
-
-			if ( 'calculadora' === a.widget ) {
-				controls.push(
-					el( TextControl, {
-						key: 'slug',
-						label: __( 'Slug da calculadora', 'valorfinal-calculadoras-widgets' ),
-						help: __( 'Ex.: calculadora-rescisao-clt', 'valorfinal-calculadoras-widgets' ),
-						value: a.slug,
-						onChange: function ( v ) {
-							set( { slug: v } );
-						},
-					} )
-				);
+			function aoEscolherWidget( v ) {
+				if ( v && 0 === v.indexOf( 'calc:' ) ) {
+					set( { widget: 'calculadora', slug: v.slice( 5 ) } );
+				} else {
+					set( { widget: v || '', slug: '' } );
+				}
 			}
 
-			controls.push(
-				el( SelectControl, {
+			var controls = [
+				el( c.ComboboxControl, {
+					key: 'widget',
+					label: __( 'Widget', 'valorfinal-calculadoras-widgets' ),
+					help: __( 'Digite para buscar: tabela do Brasileirao, dolar, ou uma calculadora.', 'valorfinal-calculadoras-widgets' ),
+					value: valorAtual( a ),
+					options: OPCOES,
+					onChange: aoEscolherWidget,
+				} ),
+				el( c.SelectControl, {
 					key: 'tema',
 					label: __( 'Tema', 'valorfinal-calculadoras-widgets' ),
 					value: a.tema,
@@ -66,7 +61,7 @@
 						set( { tema: v } );
 					},
 				} ),
-				el( TextControl, {
+				el( c.TextControl, {
 					key: 'cor',
 					label: __( 'Cor de destaque (hex)', 'valorfinal-calculadoras-widgets' ),
 					value: a.cor,
@@ -75,7 +70,7 @@
 						set( { cor: v } );
 					},
 				} ),
-				el( SelectControl, {
+				el( c.SelectControl, {
 					key: 'largura',
 					label: __( 'Largura', 'valorfinal-calculadoras-widgets' ),
 					value: a.largura,
@@ -89,7 +84,7 @@
 						set( { largura: v } );
 					},
 				} ),
-				el( ToggleControl, {
+				el( c.ToggleControl, {
 					key: 'titulo',
 					label: __( 'Mostrar titulo', 'valorfinal-calculadoras-widgets' ),
 					checked: a.titulo,
@@ -97,15 +92,16 @@
 						set( { titulo: v } );
 					},
 				} ),
-				el( ToggleControl, {
+				el( c.ToggleControl, {
 					key: 'credito',
-					label: __( 'Mostrar credito ao ValorFinal', 'valorfinal-calculadoras-widgets' ),
+					label: __( 'Exibir um credito ao ValorFinal (opcional)', 'valorfinal-calculadoras-widgets' ),
+					help: __( 'Ajuda muito o ValorFinal a continuar distribuindo os widgets de graca. Fica um link discreto abaixo do widget.', 'valorfinal-calculadoras-widgets' ),
 					checked: a.credito,
 					onChange: function ( v ) {
 						set( { credito: v } );
 					},
-				} )
-			);
+				} ),
+			];
 
 			return el(
 				'div',
@@ -114,7 +110,7 @@
 					InspectorControls,
 					{ key: 'inspector' },
 					el(
-						PanelBody,
+						c.PanelBody,
 						{ title: __( 'Configuracoes do widget', 'valorfinal-calculadoras-widgets' ), initialOpen: true },
 						controls
 					)

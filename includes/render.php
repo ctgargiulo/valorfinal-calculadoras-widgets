@@ -237,9 +237,11 @@ function vfcw_render( $a ) {
 		}
 	}
 
-	// Booleanos (titulo e credito sao "ligados" por padrao).
-	$mostrar_titulo  = ! vfcw_is_falsy( isset( $a['titulo'] ) ? $a['titulo'] : true );
-	$mostrar_credito = ! vfcw_is_falsy( isset( $a['credito'] ) ? $a['credito'] : true );
+	// Titulo: ligado por padrao (faz parte do conteudo do widget).
+	$mostrar_titulo = ! vfcw_is_falsy( isset( $a['titulo'] ) ? $a['titulo'] : true );
+	// Credito/atribuicao: OPT-IN (DESLIGADO por padrao) - Diretriz 10 do WordPress.org
+	// exige que links de credito nao apareçam por padrao no site do usuario.
+	$mostrar_credito = isset( $a['credito'] ) ? ! vfcw_is_falsy( $a['credito'] ) : false;
 
 	// Idioma (so widgets universais; enum).
 	$lang = ( $def['lang'] && isset( $a['idioma'] ) && 'en' === $a['idioma'] ) ? 'en' : 'pt';

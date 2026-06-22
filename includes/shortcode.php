@@ -35,7 +35,7 @@ function vfcw_shortcode( $atts ) {
 			'altura'       => '',
 			'idioma'       => 'pt',
 			'titulo'       => '1',
-			'credito'      => '1',
+			'credito'      => '0',
 			'titulo_texto' => '',
 		),
 		is_array( $atts ) ? $atts : array(),

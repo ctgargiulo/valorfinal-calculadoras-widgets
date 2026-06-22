@@ -31,7 +31,7 @@ function vfcw_block_render( $attributes ) {
 			'cor'     => isset( $a['cor'] ) ? $a['cor'] : '',
 			'largura' => isset( $a['largura'] ) ? $a['largura'] : 'padrao',
 			'titulo'  => ( isset( $a['titulo'] ) && false === $a['titulo'] ) ? '0' : '1',
-			'credito' => ( isset( $a['credito'] ) && false === $a['credito'] ) ? '0' : '1',
+			'credito' => empty( $a['credito'] ) ? '0' : '1',
 		)
 	);
 }
@@ -60,23 +60,33 @@ function vfcw_register_block() {
 		)
 	);
 
-	// Catalogo para o seletor do editor (rotulos traduzidos), exposto ao script.
+	// Catalogo para o seletor PESQUISAVEL do editor: widgets ao vivo + as 394
+	// calculadoras embedaveis. So no editor (nao vai para o front-end).
 	if ( wp_script_is( 'valorfinal-calculadoras-widgets-editor-script', 'registered' ) ) {
-		$opcoes = array();
+		$live = array();
 		foreach ( vfcw_catalog() as $key => $w ) {
-			$opcoes[] = array(
+			$live[] = array(
 				'value' => $key,
 				'label' => $w['label'],
 			);
 		}
-		$opcoes[] = array(
-			'value' => 'calculadora',
-			'label' => __( 'Calculadora (informe o slug)', 'valorfinal-calculadoras-widgets' ),
-		);
+
+		$calcs = array();
+		require_once VFCW_DIR . 'includes/calculadoras.php';
+		foreach ( vfcw_calculadoras() as $c ) {
+			$calcs[] = array(
+				'value' => 'calc:' . $c['slug'],
+				'label' => '' !== $c['cat'] ? $c['label'] . ' (' . $c['cat'] . ')' : $c['label'],
+			);
+		}
+
 		wp_localize_script(
 			'valorfinal-calculadoras-widgets-editor-script',
 			'VFCW_DATA',
-			array( 'widgets' => $opcoes )
+			array(
+				'live'  => $live,
+				'calcs' => $calcs,
+			)
 		);
 	}
 }

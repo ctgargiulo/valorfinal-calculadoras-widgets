@@ -20,7 +20,7 @@
 		"cor":     { "type": "string", "default": "" },
 		"largura": { "type": "string", "default": "padrao" },
 		"titulo":  { "type": "boolean", "default": true },
-		"credito": { "type": "boolean", "default": true }
+		"credito": { "type": "boolean", "default": false }
 	},
 	"editorScript": "valorfinal-calculadoras-widgets-editor-script"
 }

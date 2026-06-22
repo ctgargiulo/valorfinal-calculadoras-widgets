@@ -3,7 +3,7 @@
  * Plugin Name:       ValorFinal: Calculadoras e Widgets
  * Plugin URI:        https://valorfinal.com.br/embed/wordpress
  * Description:        Adicione widgets ao vivo do ValorFinal no seu site: tabela e jogos do Brasileirao, cotacao do dolar, Selic, CDI, Bitcoin, resultados de loteria e mais de 200 calculadoras. Bloco, shortcode e widget. Atualiza sozinho, sem custo.
- * Version:           1.0.0
+ * Version:           1.1.0
  * Requires at least: 5.8
  * Requires PHP:      7.2
  * Author:            ValorFinal
@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'VFCW_VERSION', '1.0.0' );
+define( 'VFCW_VERSION', '1.1.0' );
 define( 'VFCW_FILE', __FILE__ );
 define( 'VFCW_DIR', plugin_dir_path( __FILE__ ) );
 define( 'VFCW_URL', plugin_dir_url( __FILE__ ) );

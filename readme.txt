@@ -4,7 +4,7 @@ Tags: brasileirao, calculadora, dolar, widget, futebol
 Requires at least: 5.8
 Tested up to: 6.8
 Requires PHP: 7.2
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,7 +50,7 @@ Tres formas, todas com as mesmas opcoes:
 
 Este plugin **nao coleta nem envia nenhum dado pessoal**. Ele apenas insere um iframe que carrega o widget publico de https://valorfinal.com.br, que se atualiza sozinho. Nenhum dado dos seus visitantes passa pelo plugin. O codigo e aberto (GPL) e legivel.
 
-O link de credito ao ValorFinal vem ligado por padrao (e o que mantem os widgets gratuitos), mas voce pode **desliga-lo** a qualquer momento nas opcoes do widget.
+O link de credito ao ValorFinal vem **desligado por padrao** (opt-in) e nunca e obrigatorio. Se voce marcar a opcao para exibi-lo, ajuda muito o ValorFinal a continuar distribuindo os widgets de graca, com um link discreto abaixo do widget.
 
 == Installation ==
 
@@ -76,9 +76,9 @@ Nao. O iframe carrega de forma assincrona (loading lazy) e os dados vem do servi
 
 O widget publica a propria altura por postMessage e um pequeno script ajusta o iframe. Por seguranca, o script so aceita mensagens da origem https://valorfinal.com.br.
 
-= Posso esconder o link de credito? =
+= O link de credito ao ValorFinal e obrigatorio? =
 
-Pode. Ele vem ligado por padrao, mas ha uma opcao para desliga-lo no bloco, no shortcode (`credito="0"`) e no widget classico.
+Nao. Ele vem **desligado por padrao** e e totalmente opcional. Voce pode liga-lo no bloco, no shortcode (`credito="1"`) ou no widget classico. Ativar esse credito ajuda muito o ValorFinal a continuar distribuindo os widgets de graca, mas o plugin funciona 100% sem ele.
 
 = Quais widgets estao disponiveis? =
 
@@ -96,6 +96,10 @@ Sim, e gratuito para uso pessoal e comercial.
 
 == Changelog ==
 
+= 1.1.0 =
+* Novo: seletor PESQUISAVEL no bloco, com os widgets ao vivo e as mais de 390 calculadoras (digite para encontrar).
+* Conformidade: o link de credito ao ValorFinal agora vem DESLIGADO por padrao (opt-in), conforme as diretrizes do WordPress.org.
+
 = 1.0.0 =
 * Versao inicial: bloco, shortcode e widget classico.
 * Widgets de futebol ao vivo (tabela e jogos do Brasileirao, jogos da Copa).
@@ -104,6 +108,9 @@ Sim, e gratuito para uso pessoal e comercial.
 * Opcoes de tema, cor, largura, titulo e credito. Ajuste de altura automatico e seguro.
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+Seletor pesquisavel com todas as calculadoras e o link de credito agora opt-in (desligado por padrao).
 
 = 1.0.0 =
 Versao inicial do plugin ValorFinal: Calculadoras e Widgets.

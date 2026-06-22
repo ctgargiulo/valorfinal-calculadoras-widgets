@@ -59,7 +59,7 @@ Perfeito para blogs de torcida: cole uma vez, fica a temporada inteira.
 | `cor` | hex `#rrggbb` | `#2563eb` |
 | `largura` | `compacto` \| `padrao` \| `largo` \| `total` | `padrao` |
 | `titulo` | `1` \| `0` | `1` |
-| `credito` | `1` \| `0` | `1` |
+| `credito` | `1` \| `0` | `0` (opt-in) |
 | `idioma` | `pt` \| `en` (widgets universais) | `pt` |
 
 **Widget clássico:** *Aparência > Widgets > "ValorFinal: widget"*.
@@ -70,7 +70,7 @@ Perfeito para blogs de torcida: cole uma vez, fica a temporada inteira.
 - **Sem chamadas remotas de código.** Nada de `eval`, nada de carregar scripts de terceiros.
 - O script de auto-altura **só aceita mensagens da origem `https://valorfinal.com.br`** (`event.origin`), validadas antes de qualquer ação.
 - Toda entrada é sanitizada (whitelist de widgets, `sanitize_hex_color`, `sanitize_key`) e toda saída é escapada (`esc_url`, `esc_attr`, `esc_html`).
-- Crédito ao ValorFinal é **opt-in** (vem ligado, mas pode ser desligado).
+- Crédito ao ValorFinal é **opt-in**: vem **desligado por padrão** e nunca é obrigatório (conforme a Diretriz 10 do WordPress.org). Ativá-lo ajuda o projeto a manter os widgets gratuitos.
 
 ## Desenvolvimento
 
