@@ -1,5 +1,5 @@
 === ValorFinal: Calculadoras e Widgets ===
-Contributors: valorfinal
+Contributors: ctgargiulo01
 Tags: brasileirao, calculadora, dolar, widget, futebol
 Requires at least: 5.8
 Tested up to: 7.0
