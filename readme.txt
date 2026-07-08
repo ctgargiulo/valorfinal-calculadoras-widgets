@@ -2,7 +2,7 @@
 Contributors: valorfinal
 Tags: brasileirao, calculadora, dolar, widget, futebol
 Requires at least: 5.8
-Tested up to: 6.8
+Tested up to: 7.0
 Requires PHP: 7.2
 Stable tag: 1.1.0
 License: GPLv2 or later
@@ -46,6 +46,14 @@ Tres formas, todas com as mesmas opcoes:
 2. **Shortcode**: `[valorfinal widget="tabela-brasileirao"]`. Aceita `tema`, `cor`, `largura`, `titulo`, `credito` e (para calculadoras) `slug`.
 3. **Widget classico**: em Aparencia > Widgets, adicione "ValorFinal: widget".
 
+= Servico de terceiros =
+
+Este plugin funciona exibindo um `<iframe>` que carrega os widgets publicos do servico **ValorFinal** (https://valorfinal.com.br), operado pela GUARDIASEC. Para que os widgets apareçam e se mantenham atualizados, o navegador do seu visitante carrega a pagina publica do widget diretamente de valorfinal.com.br. Ou seja, o plugin depende desse servico externo para funcionar. O plugin em si nao envia nenhum dado ao ValorFinal (nem do site, nem dos visitantes); o iframe apenas exibe conteudo publico ja disponivel no site do ValorFinal.
+
+* Site do servico: https://valorfinal.com.br
+* Termos de uso: https://valorfinal.com.br/termos
+* Politica de privacidade: https://valorfinal.com.br/privacidade
+
 = Privacidade e seguranca =
 
 Este plugin **nao coleta nem envia nenhum dado pessoal**. Ele apenas insere um iframe que carrega o widget publico de https://valorfinal.com.br, que se atualiza sozinho. Nenhum dado dos seus visitantes passa pelo plugin. O codigo e aberto (GPL) e legivel.
@@ -63,6 +71,10 @@ O link de credito ao ValorFinal vem **desligado por padrao** (opt-in) e nunca e 
 = O plugin coleta dados dos meus visitantes? =
 
 Nao. O plugin so gera um iframe para um widget publico do ValorFinal. Nenhum dado pessoal e coletado, armazenado ou enviado pelo plugin.
+
+= O plugin depende de um servico externo? =
+
+Sim. Os widgets sao carregados por um iframe a partir do servico publico ValorFinal (https://valorfinal.com.br), operado pela GUARDIASEC, e e de la que vem o conteudo sempre atualizado. O plugin nao envia dados para esse servico; ele apenas exibe a pagina publica do widget. Consulte os Termos de uso (https://valorfinal.com.br/termos) e a Politica de privacidade (https://valorfinal.com.br/privacidade) do servico.
 
 = Preciso de uma conta ou de uma chave de API? =
 
