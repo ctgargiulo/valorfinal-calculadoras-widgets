@@ -11,7 +11,6 @@
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       valorfinal-calculadoras-widgets
- * Domain Path:       /languages
  *
  * ValorFinal: Calculadoras e Widgets - https://valorfinal.com.br
  *
@@ -62,8 +61,7 @@ function vfcw_register_assets() {
 }
 add_action( 'init', 'vfcw_register_assets' );
 
-/** Carrega as traducoes (pt_BR, en_US...). */
-function vfcw_load_textdomain() {
-	load_plugin_textdomain( 'valorfinal-calculadoras-widgets', false, dirname( plugin_basename( VFCW_FILE ) ) . '/languages' );
-}
-add_action( 'init', 'vfcw_load_textdomain' );
+// As traducoes de plugins hospedados no WordPress.org sao carregadas
+// automaticamente pelo core (translate.wordpress.org, desde o WP 4.6), entao NAO
+// chamamos load_plugin_textdomain() nem declaramos "Domain Path" - o plugin nao
+// embarca .mo/.pot proprios.
