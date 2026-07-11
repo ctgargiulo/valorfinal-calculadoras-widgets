@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name:       ValorFinal: Calculadoras e Widgets
+ * Plugin Name:       ValorFinal: Calculators and Widgets
  * Plugin URI:        https://valorfinal.com.br/embed/wordpress
- * Description:        Adicione widgets ao vivo do ValorFinal no seu site: tabela e jogos do Brasileirao, cotacao do dolar, Selic, CDI, Bitcoin, resultados de loteria e mais de 200 calculadoras. Bloco, shortcode e widget. Atualiza sozinho, sem custo.
+ * Description:        Add live ValorFinal widgets to your site: Brazilian league table and fixtures, dollar rate, Selic, CDI, Bitcoin, lottery results and 200+ calculators. Block, shortcode and widget. Refreshes on its own, at no cost.
  * Version:           1.1.0
  * Requires at least: 5.8
  * Requires PHP:      7.2
@@ -11,11 +11,13 @@
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       valorfinal-calculadoras-widgets
+ * Domain Path:       /languages
  *
- * ValorFinal: Calculadoras e Widgets - https://valorfinal.com.br
+ * ValorFinal: Calculators and Widgets - https://valorfinal.com.br
  *
- * Este plugin NAO coleta nem envia dados pessoais. Ele apenas gera um <iframe>
- * para os widgets publicos de https://valorfinal.com.br, que se atualizam sozinhos.
+ * This plugin does NOT collect or send personal data. It only generates an
+ * <iframe> for the public widgets at https://valorfinal.com.br, which refresh
+ * on their own.
  *
  * @package ValorFinal_Calculadoras_Widgets
  */
@@ -61,7 +63,8 @@ function vfcw_register_assets() {
 }
 add_action( 'init', 'vfcw_register_assets' );
 
-// As traducoes de plugins hospedados no WordPress.org sao carregadas
-// automaticamente pelo core (translate.wordpress.org, desde o WP 4.6), entao NAO
-// chamamos load_plugin_textdomain() nem declaramos "Domain Path" - o plugin nao
-// embarca .mo/.pot proprios.
+/** Carrega as traducoes (pt_BR, en_US...). */
+function vfcw_load_textdomain() {
+	load_plugin_textdomain( 'valorfinal-calculadoras-widgets', false, dirname( plugin_basename( VFCW_FILE ) ) . '/languages' );
+}
+add_action( 'init', 'vfcw_load_textdomain' );

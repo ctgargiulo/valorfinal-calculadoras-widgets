@@ -1,4 +1,4 @@
-# ValorFinal: Calculadoras e Widgets (plugin de WordPress)
+# ValorFinal: Calculators and Widgets (plugin de WordPress)
 
 Plugin oficial do **[ValorFinal](https://valorfinal.com.br)** para incorporar widgets ao vivo no seu site WordPress em um clique: **tabela e jogos do Brasileirão**, cotação do dólar, Selic, CDI, Bitcoin, resultados de loteria e mais de 200 calculadoras. Bloco (Gutenberg), shortcode e widget clássico. Os widgets **se atualizam sozinhos** e o plugin **não coleta nenhum dado**.
 

@@ -6,8 +6,8 @@
 	"title": "ValorFinal: widget",
 	"category": "embed",
 	"icon": "chart-line",
-	"description": "Tabela do Brasileirao, jogos de hoje, cotacao do dolar, Selic, Bitcoin, loterias e calculadoras do ValorFinal. Atualiza sozinho.",
-	"keywords": [ "valorfinal", "brasileirao", "dolar", "calculadora", "widget" ],
+	"description": "ValorFinal live widgets: Brazilian league table, today's fixtures, dollar rate, Selic, Bitcoin, lotteries and calculators. Refreshes on its own.",
+	"keywords": [ "valorfinal", "widget", "calculator", "football", "embed" ],
 	"textdomain": "valorfinal-calculadoras-widgets",
 	"supports": {
 		"html": false,
