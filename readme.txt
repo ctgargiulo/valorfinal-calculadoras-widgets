@@ -4,11 +4,11 @@ Tags: widget, calculator, embed, football, live-data
 Requires at least: 5.8
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Live ValorFinal widgets for your site: Brazilian football tables and fixtures, currency, Selic, Bitcoin, lottery results and calculators. Block, shortcode and widget.
+Live ValorFinal widgets: Brazilian league table and fixtures, currency, Selic, Bitcoin, lotteries and 200+ calculators. Block, shortcode, widget.
 
 == Description ==
 
@@ -98,6 +98,10 @@ Yes, it is free for personal and commercial use.
 
 == Changelog ==
 
+= 1.1.1 =
+* Compliance for the WordPress.org listing: readme and plugin description in English, "Tested up to: 7.0", shorter short description.
+* Removed the unnecessary load_plugin_textdomain() call and the Domain Path header (translations load automatically from WordPress.org).
+
 = 1.1.0 =
 * New: SEARCHABLE selector in the block, with the live widgets and the 390+ calculators (type to find one).
 * Compliance: the ValorFinal credit link is now OFF by default (opt-in), per the WordPress.org guidelines.
@@ -110,6 +114,9 @@ Yes, it is free for personal and commercial use.
 * Theme, color, width, title and credit options. Automatic, safe height adjustment.
 
 == Upgrade Notice ==
+
+= 1.1.1 =
+Compatibility and metadata updates for the WordPress.org listing (Tested up to 7.0).
 
 = 1.1.0 =
 Searchable selector with all calculators, and the credit link is now opt-in (off by default).
