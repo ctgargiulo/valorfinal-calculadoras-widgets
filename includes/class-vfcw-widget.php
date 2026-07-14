@@ -25,7 +25,7 @@ class VFCW_Widget extends WP_Widget {
 			'vfcw_widget',
 			__( 'ValorFinal: widget', 'valorfinal-calculadoras-widgets' ),
 			array(
-				'description' => __( 'Tabela do Brasileirao, cotacao do dolar, Selic e mais widgets ao vivo do ValorFinal.', 'valorfinal-calculadoras-widgets' ),
+				'description' => __( 'Tabela do Brasileirão, cotação do dólar, Selic e mais widgets ao vivo do ValorFinal.', 'valorfinal-calculadoras-widgets' ),
 				'classname'   => 'vfcw-widget',
 			)
 		);
@@ -83,7 +83,7 @@ class VFCW_Widget extends WP_Widget {
 			</select>
 		</p>
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'slug' ) ); ?>"><?php esc_html_e( 'Slug da calculadora (so para o item "Calculadora")', 'valorfinal-calculadoras-widgets' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'slug' ) ); ?>"><?php esc_html_e( 'Slug da calculadora (só para o item "Calculadora")', 'valorfinal-calculadoras-widgets' ); ?></label>
 			<input class="widefat" type="text" id="<?php echo esc_attr( $this->get_field_id( 'slug' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'slug' ) ); ?>" value="<?php echo esc_attr( $slug ); ?>" placeholder="calculadora-rescisao-clt" />
 		</p>
 		<p>
@@ -103,7 +103,7 @@ class VFCW_Widget extends WP_Widget {
 				<?php
 				$rotulos = array(
 					'compacto' => __( 'Compacto', 'valorfinal-calculadoras-widgets' ),
-					'padrao'   => __( 'Padrao', 'valorfinal-calculadoras-widgets' ),
+					'padrao'   => __( 'Padrão', 'valorfinal-calculadoras-widgets' ),
 					'largo'    => __( 'Largo', 'valorfinal-calculadoras-widgets' ),
 					'total'    => __( 'Total (100%)', 'valorfinal-calculadoras-widgets' ),
 				);
@@ -115,11 +115,11 @@ class VFCW_Widget extends WP_Widget {
 		</p>
 		<p>
 			<input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'titulo' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'titulo' ) ); ?>" value="1" <?php checked( $titulo ); ?> />
-			<label for="<?php echo esc_attr( $this->get_field_id( 'titulo' ) ); ?>"><?php esc_html_e( 'Mostrar titulo', 'valorfinal-calculadoras-widgets' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'titulo' ) ); ?>"><?php esc_html_e( 'Mostrar título', 'valorfinal-calculadoras-widgets' ); ?></label>
 		</p>
 		<p>
 			<input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'credito' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'credito' ) ); ?>" value="1" <?php checked( $credito ); ?> />
-			<label for="<?php echo esc_attr( $this->get_field_id( 'credito' ) ); ?>"><?php esc_html_e( 'Exibir um credito ao ValorFinal (opcional). Ajuda muito o ValorFinal a continuar distribuindo os widgets de graca.', 'valorfinal-calculadoras-widgets' ); ?></label>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'credito' ) ); ?>"><?php esc_html_e( 'Exibir um crédito ao ValorFinal (opcional). Ajuda muito o ValorFinal a continuar distribuindo os widgets de graça.', 'valorfinal-calculadoras-widgets' ); ?></label>
 		</p>
 		<?php
 	}

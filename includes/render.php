@@ -36,7 +36,7 @@ function vfcw_catalog() {
 	return array(
 		// Futebol ao vivo (motor de incorporacao recorrente).
 		'tabela-brasileirao'       => array(
-			'label'  => 'Tabela do Brasileirao Serie A',
+			'label'  => 'Tabela do Brasileirão Série A',
 			'path'   => '/embed/tabela-brasileirao',
 			'tool'   => '/tabela-brasileirao-serie-a',
 			'height' => 620,
@@ -44,7 +44,7 @@ function vfcw_catalog() {
 			'group'  => 'futebol',
 		),
 		'jogos-brasileirao-hoje'   => array(
-			'label'  => 'Jogos do Brasileirao hoje',
+			'label'  => 'Jogos do Brasileirão hoje',
 			'path'   => '/embed/jogos-brasileirao-hoje',
 			'tool'   => '/jogos-do-brasileirao-hoje',
 			'height' => 300,
@@ -61,7 +61,7 @@ function vfcw_catalog() {
 		),
 		// Financeiro ao vivo.
 		'dolar'                    => array(
-			'label'  => 'Cotacao do dolar e euro hoje',
+			'label'  => 'Cotação do dólar e euro hoje',
 			'path'   => '/embed/dolar',
 			'tool'   => '/cotacao-dolar-hoje',
 			'height' => 170,
@@ -85,7 +85,7 @@ function vfcw_catalog() {
 			'group'  => 'financeiro',
 		),
 		'poupanca'                 => array(
-			'label'  => 'Rendimento da poupanca hoje',
+			'label'  => 'Rendimento da poupança hoje',
 			'path'   => '/embed/poupanca',
 			'tool'   => '/poupanca-hoje',
 			'height' => 180,
@@ -93,7 +93,7 @@ function vfcw_catalog() {
 			'group'  => 'financeiro',
 		),
 		'bitcoin'                  => array(
-			'label'  => 'Cotacao do Bitcoin hoje',
+			'label'  => 'Cotação do Bitcoin hoje',
 			'path'   => '/embed/bitcoin',
 			'tool'   => '/cotacao-bitcoin-hoje',
 			'height' => 200,
@@ -109,7 +109,7 @@ function vfcw_catalog() {
 			'group'  => 'financeiro',
 		),
 		'indicadores'              => array(
-			'label'  => 'Indicadores economicos hoje',
+			'label'  => 'Indicadores econômicos hoje',
 			'path'   => '/embed/indicadores',
 			'tool'   => '/indicadores-economicos-hoje',
 			'height' => 210,
@@ -134,7 +134,7 @@ function vfcw_catalog() {
 			'group'  => 'loteria',
 		),
 		'resultado-lotofacil'      => array(
-			'label'  => 'Resultado da Lotofacil',
+			'label'  => 'Resultado da Lotofácil',
 			'path'   => '/embed/resultado-lotofacil',
 			'tool'   => '/loterias/lotofacil/resultado',
 			'height' => 200,
@@ -150,7 +150,7 @@ function vfcw_catalog() {
 			'group'  => 'loteria',
 		),
 		'resultado-maismilionaria' => array(
-			'label'  => 'Resultado da +Milionaria',
+			'label'  => 'Resultado da +Milionária',
 			'path'   => '/embed/resultado-maismilionaria',
 			'tool'   => '/loterias/maismilionaria/resultado',
 			'height' => 210,

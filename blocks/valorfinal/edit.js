@@ -44,7 +44,7 @@
 				el( c.ComboboxControl, {
 					key: 'widget',
 					label: __( 'Widget', 'valorfinal-calculadoras-widgets' ),
-					help: __( 'Digite para buscar: tabela do Brasileirao, dolar, ou uma calculadora.', 'valorfinal-calculadoras-widgets' ),
+					help: __( 'Digite para buscar: tabela do Brasileirão, dólar, ou uma calculadora.', 'valorfinal-calculadoras-widgets' ),
 					value: valorAtual( a ),
 					options: OPCOES,
 					onChange: aoEscolherWidget,
@@ -76,7 +76,7 @@
 					value: a.largura,
 					options: [
 						{ value: 'compacto', label: __( 'Compacto', 'valorfinal-calculadoras-widgets' ) },
-						{ value: 'padrao', label: __( 'Padrao', 'valorfinal-calculadoras-widgets' ) },
+						{ value: 'padrao', label: __( 'Padrão', 'valorfinal-calculadoras-widgets' ) },
 						{ value: 'largo', label: __( 'Largo', 'valorfinal-calculadoras-widgets' ) },
 						{ value: 'total', label: __( 'Total (100%)', 'valorfinal-calculadoras-widgets' ) },
 					],
@@ -86,7 +86,7 @@
 				} ),
 				el( c.ToggleControl, {
 					key: 'titulo',
-					label: __( 'Mostrar titulo', 'valorfinal-calculadoras-widgets' ),
+					label: __( 'Mostrar título', 'valorfinal-calculadoras-widgets' ),
 					checked: a.titulo,
 					onChange: function ( v ) {
 						set( { titulo: v } );
@@ -94,8 +94,8 @@
 				} ),
 				el( c.ToggleControl, {
 					key: 'credito',
-					label: __( 'Exibir um credito ao ValorFinal (opcional)', 'valorfinal-calculadoras-widgets' ),
-					help: __( 'Ajuda muito o ValorFinal a continuar distribuindo os widgets de graca. Fica um link discreto abaixo do widget.', 'valorfinal-calculadoras-widgets' ),
+					label: __( 'Exibir um crédito ao ValorFinal (opcional)', 'valorfinal-calculadoras-widgets' ),
+					help: __( 'Ajuda muito o ValorFinal a continuar distribuindo os widgets de graça. Fica um link discreto abaixo do widget.', 'valorfinal-calculadoras-widgets' ),
 					checked: a.credito,
 					onChange: function ( v ) {
 						set( { credito: v } );
@@ -111,7 +111,7 @@
 					{ key: 'inspector' },
 					el(
 						c.PanelBody,
-						{ title: __( 'Configuracoes do widget', 'valorfinal-calculadoras-widgets' ), initialOpen: true },
+						{ title: __( 'Configurações do widget', 'valorfinal-calculadoras-widgets' ), initialOpen: true },
 						controls
 					)
 				),

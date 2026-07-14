@@ -2,8 +2,8 @@
 /**
  * Plugin Name:       ValorFinal: Calculators and Widgets
  * Plugin URI:        https://valorfinal.com.br/embed/wordpress
- * Description:        Add live ValorFinal widgets to your site: Brazilian league table and fixtures, dollar rate, Selic, CDI, Bitcoin, lottery results and 200+ calculators. Block, shortcode and widget. Refreshes on its own, at no cost.
- * Version:           1.1.1
+ * Description:        Adicione widgets ao vivo do ValorFinal ao seu site: tabela e jogos do Brasileirão, cotação do dólar, Selic, CDI, Bitcoin, resultados das loterias e mais de 200 calculadoras. Bloco, shortcode e widget. Atualiza sozinho, de graça.
+ * Version:           1.1.2
  * Requires at least: 5.8
  * Requires PHP:      7.2
  * Author:            ValorFinal
@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'VFCW_VERSION', '1.1.1' );
+define( 'VFCW_VERSION', '1.1.2' );
 define( 'VFCW_FILE', __FILE__ );
 define( 'VFCW_DIR', plugin_dir_path( __FILE__ ) );
 define( 'VFCW_URL', plugin_dir_url( __FILE__ ) );

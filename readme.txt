@@ -4,7 +4,7 @@ Tags: widget, calculator, embed, football, live-data
 Requires at least: 5.8
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,9 @@ Yes, it is free for personal and commercial use.
 
 == Changelog ==
 
+= 1.1.2 =
+* Plugin interface fully in Brazilian Portuguese with correct accents (block editor, classic widget, widget labels and the plugins list description).
+
 = 1.1.1 =
 * Compliance for the WordPress.org listing: readme and plugin description in English, "Tested up to: 7.0", shorter short description.
 * Removed the unnecessary load_plugin_textdomain() call and the Domain Path header (translations load automatically from WordPress.org).
@@ -114,6 +117,9 @@ Yes, it is free for personal and commercial use.
 * Theme, color, width, title and credit options. Automatic, safe height adjustment.
 
 == Upgrade Notice ==
+
+= 1.1.2 =
+Plugin interface in Brazilian Portuguese with correct accents.
 
 = 1.1.1 =
 Compatibility and metadata updates for the WordPress.org listing (Tested up to 7.0).
