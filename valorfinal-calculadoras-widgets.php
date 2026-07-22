@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name:       ValorFinal: Calculators and Widgets
+ * Plugin Name:       ValorFinal: Calculadoras e Widgets
  * Plugin URI:        https://valorfinal.com.br/embed/wordpress
- * Description:        Adicione widgets ao vivo do ValorFinal ao seu site: tabela e jogos do Brasileirão, cotação do dólar, Selic, CDI, Bitcoin, resultados das loterias e mais de 200 calculadoras. Bloco, shortcode e widget. Atualiza sozinho, de graça.
- * Version:           1.1.2
+ * Description:        Adicione widgets ao vivo do ValorFinal ao seu site: tabela e jogos do Brasileirão, cotação do dólar, Selic, CDI, Bitcoin, resultados das loterias e mais de 390 calculadoras. Bloco, shortcode e widget. Atualiza sozinho, de graça.
+ * Version:           1.2.0
  * Requires at least: 5.8
  * Requires PHP:      7.2
  * Author:            ValorFinal
@@ -12,7 +12,7 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       valorfinal-calculadoras-widgets
  *
- * ValorFinal: Calculators and Widgets - https://valorfinal.com.br
+ * ValorFinal: Calculadoras e Widgets - https://valorfinal.com.br
  *
  * This plugin does NOT collect or send personal data. It only generates an
  * <iframe> for the public widgets at https://valorfinal.com.br, which refresh
@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'VFCW_VERSION', '1.1.2' );
+define( 'VFCW_VERSION', '1.2.0' );
 define( 'VFCW_FILE', __FILE__ );
 define( 'VFCW_DIR', plugin_dir_path( __FILE__ ) );
 define( 'VFCW_URL', plugin_dir_url( __FILE__ ) );
@@ -61,3 +61,19 @@ function vfcw_register_assets() {
 	);
 }
 add_action( 'init', 'vfcw_register_assets' );
+
+/**
+ * Atalho "Como usar" na lista de plugins (leva a documentacao oficial, com o
+ * passo a passo do bloco, do shortcode e do widget classico).
+ *
+ * @param array<int,string> $links Links de acao existentes.
+ * @return array<int,string> Links com o atalho no inicio.
+ */
+function vfcw_action_links( $links ) {
+	$doc = '<a href="https://valorfinal.com.br/embed/wordpress" target="_blank" rel="noopener">'
+		. esc_html__( 'Como usar', 'valorfinal-calculadoras-widgets' )
+		. '</a>';
+	array_unshift( $links, $doc );
+	return $links;
+}
+add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'vfcw_action_links' );

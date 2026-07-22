@@ -1804,6 +1804,11 @@ function vfcw_calculadoras() {
 			'cat'   => 'Trabalhista',
 		),
 		array(
+			'slug'  => 'meu-acerto',
+			'label' => 'Meu Acerto',
+			'cat'   => 'Trabalhista',
+		),
+		array(
 			'slug'  => 'calculadora-multa-40-fgts',
 			'label' => 'Multa 40% FGTS',
 			'cat'   => 'Trabalhista',

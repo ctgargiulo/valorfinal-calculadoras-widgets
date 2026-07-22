@@ -1,9 +1,10 @@
-# ValorFinal: Calculators and Widgets (plugin de WordPress)
+# ValorFinal: Calculadoras e Widgets (plugin de WordPress)
 
-Plugin oficial do **[ValorFinal](https://valorfinal.com.br)** para incorporar widgets ao vivo no seu site WordPress em um clique: **tabela e jogos do Brasileirão**, cotação do dólar, Selic, CDI, Bitcoin, resultados de loteria e mais de 200 calculadoras. Bloco (Gutenberg), shortcode e widget clássico. Os widgets **se atualizam sozinhos** e o plugin **não coleta nenhum dado**.
+Plugin oficial do **[ValorFinal](https://valorfinal.com.br)** para incorporar widgets ao vivo no seu site WordPress em um clique: **tabela e jogos do Brasileirão**, cotação do dólar, Selic, CDI, Bitcoin, resultados de loteria e **395 calculadoras**. Bloco (Gutenberg), shortcode e widget clássico. Os widgets **se atualizam sozinhos** e o plugin **não coleta nenhum dado**.
 
-> Site: **https://valorfinal.com.br** · Catálogo de widgets: **https://valorfinal.com.br/embed** · Guia para WordPress: **https://valorfinal.com.br/embed/wordpress**
+> **[Instale pelo diretório oficial do WordPress.org](https://wordpress.org/plugins/valorfinal-calculadoras-widgets/)** · Site: **https://valorfinal.com.br** · Catálogo de widgets: **https://valorfinal.com.br/embed** · Guia para WordPress: **https://valorfinal.com.br/embed/wordpress**
 
+[![WordPress Plugin](https://img.shields.io/wordpress/plugin/v/valorfinal-calculadoras-widgets.svg)](https://wordpress.org/plugins/valorfinal-calculadoras-widgets/)
 [![License: GPL v2+](https://img.shields.io/badge/License-GPLv2%2B-blue.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
 
 ## O que ele faz
@@ -31,7 +32,7 @@ Perfeito para blogs de torcida: cole uma vez, fica a temporada inteira.
 
 ### 🍀 Loterias e 🧮 calculadoras
 
-Últimos resultados da Mega-Sena, Quina, Lotofácil, Lotomania e +Milionária, e mais de **200 calculadoras** ([catálogo completo](https://valorfinal.com.br/embed)).
+Últimos resultados da Mega-Sena, Quina, Lotofácil, Lotomania e +Milionária, e **395 calculadoras** ([catálogo completo](https://valorfinal.com.br/embed)).
 
 ## Instalação
 
@@ -54,7 +55,7 @@ Perfeito para blogs de torcida: cole uma vez, fica a temporada inteira.
 | Atributo | Valores | Padrão |
 | --- | --- | --- |
 | `widget` | chave do catálogo ou `calculadora` | (obrigatório) |
-| `slug` | slug da calculadora (só com `widget="calculadora"`) | — |
+| `slug` | slug da calculadora (só com `widget="calculadora"`) | (vazio) |
 | `tema` | `light` \| `dark` | `light` |
 | `cor` | hex `#rrggbb` | `#2563eb` |
 | `largura` | `compacto` \| `padrao` \| `largo` \| `total` | `padrao` |
@@ -81,7 +82,7 @@ valorfinal-calculadoras-widgets.php   # bootstrap
 includes/render.php                   # catálogo (whitelist) + builder seguro
 includes/shortcode.php                # [valorfinal]
 includes/block.php                    # bloco (render server-side)
-includes/widget.php                   # widget clássico
+includes/class-vfcw-widget.php        # widget clássico
 blocks/valorfinal/                    # block.json + edit.js (buildless)
 assets/js/valorfinal-embed.js         # auto-altura (origem validada)
 ```
@@ -94,4 +95,4 @@ GPL-2.0-or-later. Veja [LICENSE](LICENSE).
 
 ---
 
-Feito por **[ValorFinal](https://valorfinal.com.br)** — sua calculadora online.
+Feito por **[ValorFinal](https://valorfinal.com.br)**, sua calculadora online.

@@ -1,131 +1,170 @@
-=== ValorFinal: Calculators and Widgets ===
+=== ValorFinal: Calculadoras e Widgets ===
 Contributors: ctgargiulo01
-Tags: widget, calculator, embed, football, live-data
+Tags: calculadora, widget, brasileirao, cotacao, loterias
 Requires at least: 5.8
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.1.2
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Live ValorFinal widgets: Brazilian league table and fixtures, currency, Selic, Bitcoin, lotteries and 200+ calculators. Block, shortcode, widget.
+Tabela e jogos do Brasileirão ao vivo, dólar, Selic, Bitcoin, loterias e 395 calculadoras no seu WordPress. Bloco, shortcode e widget. Grátis.
 
 == Description ==
 
-Add free, always up to date widgets from **ValorFinal** (https://valorfinal.com.br) to your WordPress site in one click. Pick a widget, adjust the theme and color, and you are done: the content refreshes on its own, with nothing else to maintain.
+Coloque widgets gratuitos e sempre atualizados do **ValorFinal** (https://valorfinal.com.br) no seu site WordPress em um clique. Você escolhe o widget, ajusta o tema e a cor, e pronto: o conteúdo se atualiza sozinho, sem nada para manter.
 
-Built for football fan blogs, sports sites, finance portals and any site that wants to show live data.
+Feito para blogs de torcida, sites de esporte, portais de finanças, escritórios de contabilidade e qualquer site que queira mostrar dados ao vivo ou uma calculadora útil.
 
-ValorFinal is a Brazilian portal of free calculators and tools. This plugin embeds its public widgets by iframe; it does not process or store any remote data.
+O ValorFinal é um portal brasileiro de calculadoras e ferramentas gratuitas, mantido pela GUARDIASEC LTDA. Este plugin incorpora os widgets públicos do portal por iframe; ele não processa nem armazena nenhum dado remoto.
 
-= Football widgets (refresh every round) =
+= Futebol ao vivo (atualiza a cada rodada) =
 
-* **Live Brazilian Serie A table** - standings with points, matches and goal difference. Full version at https://valorfinal.com.br/tabela-brasileirao-serie-a
-* **Today's Brazilian league fixtures** - the round's matches with Brasilia kickoff times and live score. https://valorfinal.com.br/jogos-do-brasileirao-hoje
-* **Today's World Cup matches** - https://valorfinal.com.br/jogos-da-copa-hoje
+* **Tabela do Brasileirão Série A** - classificação com pontos, jogos e saldo, ao vivo. Versão completa em https://valorfinal.com.br/tabela-brasileirao-serie-a
+* **Jogos do Brasileirão hoje** - os jogos da rodada com horário de Brasília e placar ao vivo. https://valorfinal.com.br/jogos-do-brasileirao-hoje
+* **Jogos da Copa do Mundo hoje** - https://valorfinal.com.br/jogos-da-copa-hoje
 
-Paste once and the widget follows the whole season on its own.
+Você cola uma vez e o widget acompanha a temporada inteira sozinho.
 
-= Finance widgets (live) =
+= Financeiro ao vivo =
 
-* US dollar and euro rate today - https://valorfinal.com.br/cotacao-dolar-hoje
-* Selic and CDI rates today - https://valorfinal.com.br/selic-hoje
-* Accumulated IPCA inflation, savings account yield, Bitcoin price, currency converter and the economic indicators panel.
+* Cotação do dólar e do euro hoje - https://valorfinal.com.br/cotacao-dolar-hoje
+* Selic e CDI hoje - https://valorfinal.com.br/selic-hoje
+* IPCA acumulado, rendimento da poupança, cotação do Bitcoin, conversor de moedas e o painel de indicadores econômicos.
 
-= Lotteries =
+= Loterias =
 
-* Latest results for Mega-Sena, Quina, Lotofacil, Lotomania and +Milionaria.
+* Último resultado da Mega-Sena, Quina, Lotofácil, Lotomania e +Milionária.
 
-= Calculators =
+= 395 calculadoras =
 
-* More than 200 ValorFinal calculators (severance pay, social security, financing, BMI and many more) by tool slug. Widget catalog: https://valorfinal.com.br/embed
+* Mais de 390 calculadoras do ValorFinal (rescisão CLT, salário líquido, INSS, financiamento, IMC e muitas outras) pelo slug da ferramenta, com busca direto no editor. Catálogo completo: https://valorfinal.com.br/embed
 
-= How to use =
+= Como usar =
 
-Three ways, all with the same options:
+Três caminhos, todos com as mesmas opções:
 
-1. **Block** (Gutenberg editor): add the "ValorFinal: widget" block, pick a widget in the side panel and see the preview right away.
-2. **Shortcode**: `[valorfinal widget="tabela-brasileirao"]`. Accepts `tema`, `cor`, `largura`, `titulo`, `credito` and (for calculators) `slug`.
-3. **Classic widget**: under Appearance > Widgets, add "ValorFinal: widget".
+1. **Bloco** (editor Gutenberg): adicione o bloco "ValorFinal: widget", escolha o widget no painel lateral (dá para buscar digitando) e veja a prévia na hora.
+2. **Shortcode**: `[valorfinal widget="tabela-brasileirao"]`. Aceita `tema` (light ou dark), `cor` (hex), `largura` (compacto, padrao, largo, total), `titulo`, `credito` e, para calculadoras, `slug`. Exemplo com calculadora: `[valorfinal widget="calculadora" slug="calculadora-rescisao-clt"]`
+3. **Widget clássico**: em Aparência > Widgets, adicione "ValorFinal: widget".
 
-= Privacy and security =
+A documentação completa, com exemplos, está em https://valorfinal.com.br/embed/wordpress
 
-This plugin **does not collect or send any personal data**. It only inserts an iframe that loads the public widget from https://valorfinal.com.br, which refreshes on its own. No visitor data passes through the plugin. The code is open source (GPL) and readable.
+= Personalização =
 
-The credit link back to ValorFinal is **off by default** (opt-in) and never required. If you turn it on, it helps ValorFinal keep giving the widgets away for free, with a small link below the widget.
+Todo widget aceita tema claro ou escuro, cor de destaque em hex, quatro larguras e a opção de esconder o título. A altura se ajusta sozinha ao conteúdo.
+
+= Segurança e privacidade =
+
+Este plugin **não coleta nem envia nenhum dado pessoal**. Ele só insere um iframe que carrega o widget público do https://valorfinal.com.br, que se atualiza sozinho. Nenhum dado dos seus visitantes passa pelo plugin. O código é aberto (GPL) e legível: uma whitelist fechada de widgets, sanitização de todas as opções e escape de toda a saída.
+
+O link de crédito ao ValorFinal vem **desligado por padrão** (opt-in) e nunca é obrigatório. Se você ligar, ajuda o ValorFinal a continuar distribuindo os widgets de graça, com um link discreto abaixo do widget.
+
+= Serviço de terceiros =
+
+Os widgets são carregados por iframe a partir de https://valorfinal.com.br, portal operado pela GUARDIASEC LTDA (ValorFinal). Ao usar o plugin, as páginas com widget carregam conteúdo desse domínio no navegador do visitante, como qualquer iframe. Termos de uso: https://valorfinal.com.br/termos - Política de privacidade: https://valorfinal.com.br/privacidade
+
+= Quer uma calculadora que ainda não existe? =
+
+O catálogo cresce todo mês. Se o seu site precisa de uma calculadora ou de um widget que ainda não está na lista, peça pela página de contato: https://valorfinal.com.br/contato - os pedidos de quem usa o plugin entram na frente da fila.
 
 == Installation ==
 
-1. Under Plugins > Add New, search for "ValorFinal", install and activate. Or upload the .zip under Plugins > Add New > Upload Plugin.
-2. Add the "ValorFinal: widget" block to a page or post, or use the shortcode `[valorfinal widget="tabela-brasileirao"]`, or the classic widget under Appearance > Widgets.
-3. Pick the widget, theme and color. Done: it refreshes on its own.
+1. Em Plugins > Adicionar novo, busque por "ValorFinal", instale e ative. Ou envie o .zip em Plugins > Adicionar novo > Enviar plugin.
+2. Adicione o bloco "ValorFinal: widget" a uma página ou post, ou use o shortcode `[valorfinal widget="tabela-brasileirao"]`, ou o widget clássico em Aparência > Widgets.
+3. Escolha o widget, o tema e a cor. Pronto: ele se atualiza sozinho.
 
 == Frequently Asked Questions ==
 
-= Does the plugin collect my visitors' data? =
+= O plugin coleta dados dos meus visitantes? =
 
-No. The plugin only generates an iframe for a public ValorFinal widget. No personal data is collected, stored or sent by the plugin.
+Não. O plugin só gera um iframe para um widget público do ValorFinal. Nenhum dado pessoal é coletado, armazenado ou enviado pelo plugin.
 
-= Do I need an account or an API key? =
+= Preciso de conta ou de chave de API? =
 
-No. It is free, with no signup and no key. The widgets are public.
+Não. É grátis, sem cadastro e sem chave. Os widgets são públicos.
 
-= Does the widget slow the site down? =
+= O widget deixa o site lento? =
 
-No. The iframe loads asynchronously (lazy loading) and the data comes from the ValorFinal server; the height adjusts automatically.
+Não. O iframe carrega de forma assíncrona (lazy loading) e os dados vêm do servidor do ValorFinal, sem pesar no seu WordPress. A altura se ajusta automaticamente.
 
-= How does the height adjustment work? =
+= Como funciona o ajuste de altura? =
 
-The widget posts its own height via postMessage and a small script resizes the iframe. For safety, the script only accepts messages from the origin https://valorfinal.com.br.
+O widget informa a própria altura por postMessage e um script pequeno redimensiona o iframe. Por segurança, o script só aceita mensagens da origem https://valorfinal.com.br.
 
-= Is the ValorFinal credit link required? =
+= Como coloco uma calculadora específica? =
 
-No. It is **off by default** and completely optional. You can turn it on in the block, the shortcode (`credito="1"`) or the classic widget. Turning it on helps ValorFinal keep giving the widgets away for free, but the plugin works fully without it.
+No bloco, digite o nome no seletor (por exemplo "rescisão") e escolha na lista. No shortcode, use `[valorfinal widget="calculadora" slug="calculadora-rescisao-clt"]`, trocando o slug pelo da calculadora que você quer. Os slugs estão em https://valorfinal.com.br/embed
 
-= Which widgets are available? =
+= Funciona com Elementor e outros construtores? =
 
-Brazilian league table and fixtures, World Cup matches, dollar/euro, Selic/CDI, IPCA, savings, Bitcoin, currency converter, economic indicators, lottery results and more than 200 calculators. See them all at https://valorfinal.com.br/embed
+Sim. O shortcode funciona em qualquer campo que aceite shortcodes, o que inclui Elementor, Divi e similares. Também dá para colar o código de incorporação num widget de HTML.
 
-= Is it free for commercial use? =
+= O link de crédito ao ValorFinal é obrigatório? =
 
-Yes, it is free for personal and commercial use.
+Não. Ele vem **desligado por padrão** e é totalmente opcional. Você pode ligar no bloco, no shortcode (`credito="1"`) ou no widget clássico. Ligar ajuda o ValorFinal a continuar distribuindo os widgets de graça, mas o plugin funciona por completo sem isso.
+
+= Quais widgets estão disponíveis? =
+
+Tabela e jogos do Brasileirão, jogos da Copa, dólar e euro, Selic e CDI, IPCA, poupança, Bitcoin, conversor de moedas, indicadores econômicos, resultados de loterias e 395 calculadoras. Veja todos em https://valorfinal.com.br/embed
+
+= É grátis para uso comercial? =
+
+Sim, é gratuito para uso pessoal e comercial.
+
+= Como peço uma calculadora nova ou reporto um problema? =
+
+Para dúvidas do plugin, use o fórum de suporte aqui do diretório. Para pedir uma calculadora nova ou falar com o ValorFinal, use https://valorfinal.com.br/contato
 
 == Screenshots ==
 
-1. Live Brazilian Serie A table embedded in a post.
-2. The "ValorFinal: widget" block in the editor, with preview and theme and color options.
-3. Today's Brazilian league fixtures with live score.
+1. Tabela do Brasileirão Série A ao vivo, incorporada num post.
+2. O bloco "ValorFinal: widget" no editor, com prévia e as opções de tema, cor e largura.
+3. Jogos do Brasileirão de hoje, com placar ao vivo e horário de Brasília.
+4. Seletor pesquisável: digite para achar uma das 395 calculadoras.
+5. Widget financeiro de cotação do dólar e do euro.
 
 == Changelog ==
 
+= 1.2.0 =
+* Página do diretório em português do Brasil (descrição, FAQ, capturas e changelog).
+* Banner corrigido: a tabela do Brasileirão aparecia cortada na borda da imagem.
+* Capturas de tela refeitas com a interface atual (acentuação correta e crédito desligado por padrão) e duas capturas novas: o seletor pesquisável e o widget de cotação.
+* Catálogo atualizado: 395 calculadoras embedáveis.
+* Nome de exibição do plugin com acentuação correta: "ValorFinal: Calculadoras e Widgets".
+* Novo link "Como usar" na lista de plugins, levando à documentação oficial.
+
 = 1.1.2 =
-* Plugin interface fully in Brazilian Portuguese with correct accents (block editor, classic widget, widget labels and the plugins list description).
+* Interface do plugin toda em português do Brasil com acentuação correta (editor de bloco, widget clássico, rótulos e a descrição na lista de plugins).
 
 = 1.1.1 =
-* Compliance for the WordPress.org listing: readme and plugin description in English, "Tested up to: 7.0", shorter short description.
-* Removed the unnecessary load_plugin_textdomain() call and the Domain Path header (translations load automatically from WordPress.org).
+* Conformidade da página no WordPress.org: readme e descrição em inglês, "Tested up to: 7.0" e descrição curta menor.
+* Removidos a chamada load_plugin_textdomain() e o cabeçalho Domain Path (as traduções vêm do próprio WordPress.org).
 
 = 1.1.0 =
-* New: SEARCHABLE selector in the block, with the live widgets and the 390+ calculators (type to find one).
-* Compliance: the ValorFinal credit link is now OFF by default (opt-in), per the WordPress.org guidelines.
+* Novo: seletor com busca no bloco, com os widgets ao vivo e as calculadoras (digite para achar).
+* Conformidade: o link de crédito ao ValorFinal agora vem desligado por padrão (opt-in), conforme as diretrizes do WordPress.org.
 
 = 1.0.0 =
-* Initial version: block, shortcode and classic widget.
-* Live football widgets (Brazilian league table and fixtures, World Cup matches).
-* Finance widgets (dollar, Selic/CDI, IPCA, savings, Bitcoin, converter, indicators).
-* Lottery results and more than 200 calculators.
-* Theme, color, width, title and credit options. Automatic, safe height adjustment.
+* Versão inicial: bloco, shortcode e widget clássico.
+* Widgets de futebol ao vivo (tabela e jogos do Brasileirão, jogos da Copa).
+* Widgets financeiros (dólar, Selic e CDI, IPCA, poupança, Bitcoin, conversor, indicadores).
+* Resultados de loterias e mais de 200 calculadoras.
+* Opções de tema, cor, largura, título e crédito. Ajuste de altura automático e seguro.
 
 == Upgrade Notice ==
 
+= 1.2.0 =
+Página do diretório em português, banner e capturas corrigidos e catálogo com 395 calculadoras.
+
 = 1.1.2 =
-Plugin interface in Brazilian Portuguese with correct accents.
+Interface do plugin em português do Brasil com acentuação correta.
 
 = 1.1.1 =
-Compatibility and metadata updates for the WordPress.org listing (Tested up to 7.0).
+Ajustes de compatibilidade e metadados da página no WordPress.org (Tested up to 7.0).
 
 = 1.1.0 =
-Searchable selector with all calculators, and the credit link is now opt-in (off by default).
+Seletor com busca incluindo todas as calculadoras, e o link de crédito agora é opt-in (desligado por padrão).
 
 = 1.0.0 =
-Initial release of the ValorFinal: Calculators and Widgets plugin.
+Primeira versão do plugin ValorFinal: Calculadoras e Widgets.
