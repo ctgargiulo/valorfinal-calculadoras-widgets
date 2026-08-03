@@ -6,6 +6,8 @@
  *   [valorfinal widget="tabela-brasileirao"]
  *   [valorfinal widget="jogos-brasileirao-hoje" tema="dark" cor="#1e88e5"]
  *   [valorfinal widget="dolar" idioma="en" largura="compacto"]
+ *   [valorfinal widget="moeda" par="EUR-BRL"]
+ *   [valorfinal widget="moeda" par="XAU-BRL" tema="dark"]
  *   [valorfinal widget="calculadora" slug="calculadora-rescisao-clt" titulo_texto="Rescisao CLT"]
  *
  * Todos os atributos sao sanitizados em vfcw_render() (fonte unica). A saida ja
@@ -29,6 +31,7 @@ function vfcw_shortcode( $atts ) {
 		array(
 			'widget'       => '',
 			'slug'         => '',
+			'par'          => '',
 			'tema'         => 'light',
 			'cor'          => '',
 			'largura'      => 'padrao',

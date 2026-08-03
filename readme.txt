@@ -4,7 +4,7 @@ Tags: calculadora, widget, brasileirao, cotacao, loterias
 Requires at least: 5.8
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.2.0
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -125,6 +125,10 @@ Para dúvidas do plugin, use o fórum de suporte aqui do diretório. Para pedir 
 5. Widget financeiro de cotação do dólar e do euro.
 
 == Changelog ==
+
+= 1.3.0 =
+* Novo widget de cotação de moedas: mais de 50 moedas em tempo real (dólar, euro, libra, iene, franco suíço, pesos dos vizinhos, lira turca e outras), além de ouro, prata e criptomoedas. No editor, digite o nome da moeda no seletor pesquisável; no shortcode, use [valorfinal widget="moeda" par="EUR-BRL"].
+* Os widgets de cotação passaram a atualizar com mais frequência durante o pregão (mesmo painel de câmbio do portal ValorFinal).
 
 = 1.2.0 =
 * Página do diretório em português do Brasil (descrição, FAQ, capturas e changelog).

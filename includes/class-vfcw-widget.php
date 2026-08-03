@@ -42,6 +42,7 @@ class VFCW_Widget extends WP_Widget {
 			array(
 				'widget'  => isset( $instance['widget'] ) ? $instance['widget'] : '',
 				'slug'    => isset( $instance['slug'] ) ? $instance['slug'] : '',
+				'par'     => isset( $instance['par'] ) ? $instance['par'] : '',
 				'tema'    => isset( $instance['tema'] ) ? $instance['tema'] : 'light',
 				'cor'     => isset( $instance['cor'] ) ? $instance['cor'] : '',
 				'largura' => isset( $instance['largura'] ) ? $instance['largura'] : 'padrao',
@@ -67,6 +68,7 @@ class VFCW_Widget extends WP_Widget {
 	public function form( $instance ) {
 		$widget  = isset( $instance['widget'] ) ? sanitize_key( $instance['widget'] ) : 'tabela-brasileirao';
 		$slug    = isset( $instance['slug'] ) ? sanitize_key( $instance['slug'] ) : '';
+		$par     = isset( $instance['par'] ) ? strtoupper( sanitize_text_field( $instance['par'] ) ) : 'USD-BRL';
 		$tema    = isset( $instance['tema'] ) && 'dark' === $instance['tema'] ? 'dark' : 'light';
 		$cor     = isset( $instance['cor'] ) ? sanitize_hex_color( $instance['cor'] ) : '';
 		$largura = isset( $instance['largura'] ) ? sanitize_key( $instance['largura'] ) : 'padrao';
@@ -79,7 +81,16 @@ class VFCW_Widget extends WP_Widget {
 				<?php foreach ( vfcw_catalog() as $key => $w ) : ?>
 					<option value="<?php echo esc_attr( $key ); ?>" <?php selected( $widget, $key ); ?>><?php echo esc_html( $w['label'] ); ?></option>
 				<?php endforeach; ?>
+				<option value="moeda" <?php selected( $widget, 'moeda' ); ?>><?php esc_html_e( 'Cotação de moeda (escolha a moeda abaixo)', 'valorfinal-calculadoras-widgets' ); ?></option>
 				<option value="calculadora" <?php selected( $widget, 'calculadora' ); ?>><?php esc_html_e( 'Calculadora (informe o slug abaixo)', 'valorfinal-calculadoras-widgets' ); ?></option>
+			</select>
+		</p>
+		<p>
+			<label for="<?php echo esc_attr( $this->get_field_id( 'par' ) ); ?>"><?php esc_html_e( 'Moeda (só para o item "Cotação de moeda")', 'valorfinal-calculadoras-widgets' ); ?></label>
+			<select class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'par' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'par' ) ); ?>">
+				<?php foreach ( vfcw_moedas() as $par_id => $par_rotulo ) : ?>
+					<option value="<?php echo esc_attr( $par_id ); ?>" <?php selected( $par, $par_id ); ?>><?php echo esc_html( $par_rotulo ); ?></option>
+				<?php endforeach; ?>
 			</select>
 		</p>
 		<p>
@@ -135,6 +146,9 @@ class VFCW_Widget extends WP_Widget {
 		$out            = array();
 		$out['widget']  = isset( $new_instance['widget'] ) ? sanitize_key( $new_instance['widget'] ) : '';
 		$out['slug']    = isset( $new_instance['slug'] ) ? sanitize_key( $new_instance['slug'] ) : '';
+		$par            = isset( $new_instance['par'] ) ? strtoupper( sanitize_text_field( $new_instance['par'] ) ) : '';
+		$moedas         = vfcw_moedas();
+		$out['par']     = isset( $moedas[ $par ] ) ? $par : '';
 		$out['tema']    = ( isset( $new_instance['tema'] ) && 'dark' === $new_instance['tema'] ) ? 'dark' : 'light';
 		$cor            = isset( $new_instance['cor'] ) ? sanitize_hex_color( $new_instance['cor'] ) : '';
 		$out['cor']     = $cor ? $cor : '';

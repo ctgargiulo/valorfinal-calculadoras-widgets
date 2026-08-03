@@ -18,13 +18,22 @@
 	var c = wp.components;
 	var ServerSideRender = wp.serverSideRender;
 
-	var DADOS = window.VFCW_DATA || { live: [], calcs: [] };
-	// Opcoes do seletor: widgets ao vivo primeiro, depois as calculadoras.
-	var OPCOES = ( DADOS.live || [] ).concat( DADOS.calcs || [] );
+	var DADOS = window.VFCW_DATA || { live: [], moedas: [], calcs: [] };
+	// Opcoes do seletor: widgets ao vivo, depois as cotacoes de moeda, depois as
+	// calculadoras (tudo pesquisavel no mesmo campo).
+	var OPCOES = ( DADOS.live || [] )
+		.concat( DADOS.moedas || [] )
+		.concat( DADOS.calcs || [] );
 
 	// Valor atual do combobox a partir dos atributos.
 	function valorAtual( a ) {
-		return 'calculadora' === a.widget ? 'calc:' + ( a.slug || '' ) : a.widget;
+		if ( 'calculadora' === a.widget ) {
+			return 'calc:' + ( a.slug || '' );
+		}
+		if ( 'moeda' === a.widget ) {
+			return 'moeda:' + ( a.par || '' );
+		}
+		return a.widget;
 	}
 
 	registerBlockType( 'valorfinal/widget', {
@@ -34,9 +43,11 @@
 
 			function aoEscolherWidget( v ) {
 				if ( v && 0 === v.indexOf( 'calc:' ) ) {
-					set( { widget: 'calculadora', slug: v.slice( 5 ) } );
+					set( { widget: 'calculadora', slug: v.slice( 5 ), par: '' } );
+				} else if ( v && 0 === v.indexOf( 'moeda:' ) ) {
+					set( { widget: 'moeda', par: v.slice( 6 ), slug: '' } );
 				} else {
-					set( { widget: v || '', slug: '' } );
+					set( { widget: v || '', slug: '', par: '' } );
 				}
 			}
 

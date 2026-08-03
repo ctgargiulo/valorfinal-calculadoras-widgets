@@ -160,6 +160,73 @@ function vfcw_catalog() {
 	);
 }
 
+/**
+ * Moedas do widget generico de cotacao (whitelist par => rotulo). Espelha o
+ * catalogo do portal (/embed/moeda). Par fora da lista nao renderiza.
+ *
+ * @return array<string,string>
+ */
+function vfcw_moedas() {
+	return array(
+		'USD-BRL'  => 'Dólar americano (USD)',
+		'USD-BRLT' => 'Dólar turismo',
+		'EUR-BRL'  => 'Euro (EUR)',
+		'EUR-BRLT' => 'Euro turismo',
+		'GBP-BRL'  => 'Libra esterlina (GBP)',
+		'CHF-BRL'  => 'Franco suíço (CHF)',
+		'JPY-BRL'  => 'Iene japonês (JPY)',
+		'CNY-BRL'  => 'Yuan chinês (CNY)',
+		'CAD-BRL'  => 'Dólar canadense (CAD)',
+		'AUD-BRL'  => 'Dólar australiano (AUD)',
+		'NZD-BRL'  => 'Dólar neozelandês (NZD)',
+		'ARS-BRL'  => 'Peso argentino (ARS)',
+		'CLP-BRL'  => 'Peso chileno (CLP)',
+		'UYU-BRL'  => 'Peso uruguaio (UYU)',
+		'PYG-BRL'  => 'Guarani paraguaio (PYG)',
+		'BOB-BRL'  => 'Boliviano (BOB)',
+		'PEN-BRL'  => 'Sol peruano (PEN)',
+		'COP-BRL'  => 'Peso colombiano (COP)',
+		'CRC-BRL'  => 'Colón costarriquenho (CRC)',
+		'MXN-BRL'  => 'Peso mexicano (MXN)',
+		'NOK-BRL'  => 'Coroa norueguesa (NOK)',
+		'SEK-BRL'  => 'Coroa sueca (SEK)',
+		'DKK-BRL'  => 'Coroa dinamarquesa (DKK)',
+		'PLN-BRL'  => 'Zloty polonês (PLN)',
+		'CZK-BRL'  => 'Coroa tcheca (CZK)',
+		'HUF-BRL'  => 'Florim húngaro (HUF)',
+		'RON-BRL'  => 'Leu romeno (RON)',
+		'RSD-BRL'  => 'Dinar sérvio (RSD)',
+		'RUB-BRL'  => 'Rublo russo (RUB)',
+		'TRY-BRL'  => 'Lira turca (TRY)',
+		'HKD-BRL'  => 'Dólar de Hong Kong (HKD)',
+		'TWD-BRL'  => 'Novo dólar taiwanês (TWD)',
+		'KRW-BRL'  => 'Won sul-coreano (KRW)',
+		'SGD-BRL'  => 'Dólar de Singapura (SGD)',
+		'THB-BRL'  => 'Baht tailandês (THB)',
+		'PHP-BRL'  => 'Peso filipino (PHP)',
+		'INR-BRL'  => 'Rupia indiana (INR)',
+		'AED-BRL'  => 'Dirham dos Emirados (AED)',
+		'SAR-BRL'  => 'Riyal saudita (SAR)',
+		'ILS-BRL'  => 'Novo shekel israelense (ILS)',
+		'EGP-BRL'  => 'Libra egípcia (EGP)',
+		'ZAR-BRL'  => 'Rand sul-africano (ZAR)',
+		'KES-BRL'  => 'Xelim queniano (KES)',
+		'XAU-BRL'  => 'Ouro, onça troy (XAU)',
+		'XAG-BRL'  => 'Prata, onça troy (XAG)',
+		'BTC-BRL'  => 'Bitcoin (BTC)',
+		'ETH-BRL'  => 'Ethereum (ETH)',
+		'BNB-BRL'  => 'BNB (BNB)',
+		'SOL-BRL'  => 'Solana (SOL)',
+		'XRP-BRL'  => 'XRP (XRP)',
+		'ADA-BRL'  => 'Cardano (ADA)',
+		'DOGE-BRL' => 'Dogecoin (DOGE)',
+		'TRX-BRL'  => 'TRON (TRX)',
+		'LINK-BRL' => 'Chainlink (LINK)',
+		'DOT-BRL'  => 'Polkadot (DOT)',
+		'LTC-BRL'  => 'Litecoin (LTC)',
+	);
+}
+
 /** Larguras suportadas (id => max-width px; 0 = 100%). */
 function vfcw_larguras() {
 	return array(
@@ -194,6 +261,26 @@ function vfcw_resolver( $a ) {
 			'tool'   => '/' . $slug,
 			'height' => 420,
 			'lang'   => false,
+		);
+	}
+
+	if ( 'moeda' === $key ) {
+		$par    = isset( $a['par'] ) ? strtoupper( sanitize_text_field( (string) $a['par'] ) ) : '';
+		$moedas = vfcw_moedas();
+		if ( ! isset( $moedas[ $par ] ) ) {
+			$par = 'USD-BRL'; // par invalido/ausente cai no dolar (mesmo default do portal).
+		}
+		return array(
+			'label'  => sprintf(
+				/* translators: %s: nome da moeda (ex.: Euro). */
+				__( 'Cotação de hoje: %s', 'valorfinal-calculadoras-widgets' ),
+				$moedas[ $par ]
+			),
+			'path'   => '/embed/moeda',
+			'tool'   => '/cambio',
+			'height' => 170,
+			'lang'   => true,
+			'extra'  => array( 'par' => $par ),
 		);
 	}
 
@@ -261,7 +348,12 @@ function vfcw_render( $a ) {
 	$maxw       = (int) $larguras[ $largura_id ];
 
 	// Query string (so o que difere do default; espelha o buildEmbedQuery do portal).
+	// Parametros proprios do widget (ex.: par da moeda) entram sempre, ja validados
+	// pelo resolver contra a whitelist.
 	$q = array();
+	if ( ! empty( $def['extra'] ) && is_array( $def['extra'] ) ) {
+		$q = $def['extra'];
+	}
 	if ( 'dark' === $tema ) {
 		$q['theme'] = 'dark';
 	}

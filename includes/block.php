@@ -27,6 +27,7 @@ function vfcw_block_render( $attributes ) {
 		array(
 			'widget'  => isset( $a['widget'] ) ? $a['widget'] : '',
 			'slug'    => isset( $a['slug'] ) ? $a['slug'] : '',
+			'par'     => isset( $a['par'] ) ? $a['par'] : '',
 			'tema'    => isset( $a['tema'] ) ? $a['tema'] : 'light',
 			'cor'     => isset( $a['cor'] ) ? $a['cor'] : '',
 			'largura' => isset( $a['largura'] ) ? $a['largura'] : 'padrao',
@@ -71,6 +72,19 @@ function vfcw_register_block() {
 			);
 		}
 
+		// Cotacao de qualquer moeda do catalogo (widget generico /embed/moeda).
+		$moedas = array();
+		foreach ( vfcw_moedas() as $par => $rotulo ) {
+			$moedas[] = array(
+				'value' => 'moeda:' . $par,
+				'label' => sprintf(
+					/* translators: %s: nome da moeda (ex.: Euro (EUR)). */
+					__( 'Cotação: %s', 'valorfinal-calculadoras-widgets' ),
+					$rotulo
+				),
+			);
+		}
+
 		$calcs = array();
 		require_once VFCW_DIR . 'includes/calculadoras.php';
 		foreach ( vfcw_calculadoras() as $c ) {
@@ -84,8 +98,9 @@ function vfcw_register_block() {
 			'valorfinal-calculadoras-widgets-editor-script',
 			'VFCW_DATA',
 			array(
-				'live'  => $live,
-				'calcs' => $calcs,
+				'live'   => $live,
+				'moedas' => $moedas,
+				'calcs'  => $calcs,
 			)
 		);
 	}
