@@ -1,6 +1,6 @@
 # ValorFinal: Calculadoras e Widgets (plugin de WordPress)
 
-Plugin oficial do **[ValorFinal](https://valorfinal.com.br)** para incorporar widgets ao vivo no seu site WordPress em um clique: **tabela e jogos do Brasileirão**, cotação do dólar, Selic, CDI, Bitcoin, resultados de loteria e **395 calculadoras**. Bloco (Gutenberg), shortcode e widget clássico. Os widgets **se atualizam sozinhos** e o plugin **não coleta nenhum dado**.
+Plugin oficial do **[ValorFinal](https://valorfinal.com.br)** para incorporar widgets ao vivo no seu site WordPress em um clique: **tabela e jogos do Brasileirão**, cotação do dólar, Selic, CDI, Bitcoin, resultados de loteria e **mais de 400 calculadoras**. Bloco (Gutenberg), shortcode e widget clássico. Os widgets **se atualizam sozinhos** e o plugin **não coleta nenhum dado**.
 
 > **[Instale pelo diretório oficial do WordPress.org](https://wordpress.org/plugins/valorfinal-calculadoras-widgets/)** · Site: **https://valorfinal.com.br** · Catálogo de widgets: **https://valorfinal.com.br/embed** · Guia para WordPress: **https://valorfinal.com.br/embed/wordpress**
 
@@ -32,7 +32,7 @@ Perfeito para blogs de torcida: cole uma vez, fica a temporada inteira.
 
 ### 🍀 Loterias e 🧮 calculadoras
 
-Últimos resultados da Mega-Sena, Quina, Lotofácil, Lotomania e +Milionária, e **395 calculadoras** ([catálogo completo](https://valorfinal.com.br/embed)).
+Últimos resultados da Mega-Sena, Quina, Lotofácil, Lotomania e +Milionária, e **mais de 400 calculadoras** ([catálogo completo](https://valorfinal.com.br/embed)).
 
 ## Instalação
 

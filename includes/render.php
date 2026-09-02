@@ -390,11 +390,16 @@ function vfcw_render( $a ) {
 	$html .= ' data-valorfinal-embed loading="lazy" width="100%" height="' . absint( $altura ) . '"';
 	$html .= ' style="' . esc_attr( $style ) . '"></iframe>';
 
+	// Credito OPCIONAL (opt-in: `credito="1"`). O link sai com rel="nofollow"
+	// porque este `<a>` fica hospedado no site de quem instala o plugin: link
+	// embutido em widget distribuido nao pode transmitir autoridade de busca,
+	// senao vira esquema de links aos olhos do Google. `noopener` continua por
+	// seguranca (o link abre em nova aba). Ver lib/embed/atribuicao.ts no site.
 	if ( $mostrar_credito ) {
 		$html .= '<p style="font:13px sans-serif;margin:6px 0 0">'
 			. esc_html( $def['label'] ) . ' '
 			. esc_html__( 'por', 'valorfinal-calculadoras-widgets' ) . ' '
-			. '<a href="' . esc_url( $tool_url ) . '" target="_blank" rel="noopener">ValorFinal</a></p>';
+			. '<a href="' . esc_url( $tool_url ) . '" target="_blank" rel="nofollow noopener">ValorFinal</a></p>';
 	}
 
 	return $html;

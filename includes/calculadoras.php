@@ -1,7 +1,8 @@
 <?php
 /**
  * Catalogo de calculadoras embedaveis (gerado do registry do ValorFinal).
- * NAO editar a mao. Usado pelo seletor pesquisavel do bloco no editor.
+ * NAO editar a mao: e gerado a partir do catalogo publico em https://valorfinal.com.br/embed.
+ * Usado pelo seletor pesquisavel do bloco no editor.
  * Slugs/titulos sao publicos (aparecem no site); sem dados sensiveis.
  *
  * @package ValorFinal_Calculadoras_Widgets
@@ -18,6 +19,26 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function vfcw_calculadoras() {
 	return array(
+		array(
+			'slug'  => 'calculadora-bebidas-festa',
+			'label' => 'Bebidas para Festa',
+			'cat'   => 'Casa e Cozinha',
+		),
+		array(
+			'slug'  => 'calculadora-churrasco',
+			'label' => 'Churrasco',
+			'cat'   => 'Casa e Cozinha',
+		),
+		array(
+			'slug'  => 'calculadora-medidas-culinarias',
+			'label' => 'Medidas Culinárias',
+			'cat'   => 'Casa e Cozinha',
+		),
+		array(
+			'slug'  => 'calculadora-pizza-festa',
+			'label' => 'Pizza para Festa',
+			'cat'   => 'Casa e Cozinha',
+		),
 		array(
 			'slug'  => 'calculadora-chuveiro-eletrico',
 			'label' => 'Chuveiro Elétrico',
@@ -799,8 +820,28 @@ function vfcw_calculadoras() {
 			'cat'   => 'Loterias',
 		),
 		array(
+			'slug'  => 'calculadora-fechamento-maismilionaria',
+			'label' => 'Fechamento +Milionária',
+			'cat'   => 'Loterias',
+		),
+		array(
+			'slug'  => 'calculadora-fechamento-diadesorte',
+			'label' => 'Fechamento Dia de Sorte',
+			'cat'   => 'Loterias',
+		),
+		array(
+			'slug'  => 'calculadora-fechamento-duplasena',
+			'label' => 'Fechamento Dupla Sena',
+			'cat'   => 'Loterias',
+		),
+		array(
 			'slug'  => 'calculadora-fechamento-lotofacil',
 			'label' => 'Fechamento Lotofácil',
+			'cat'   => 'Loterias',
+		),
+		array(
+			'slug'  => 'calculadora-fechamento-lotomania',
+			'label' => 'Fechamento Lotomania',
 			'cat'   => 'Loterias',
 		),
 		array(
@@ -859,6 +900,16 @@ function vfcw_calculadoras() {
 			'cat'   => 'Loterias',
 		),
 		array(
+			'slug'  => 'gerador-lotofacil',
+			'label' => 'Gerador de Jogos Lotofácil',
+			'cat'   => 'Loterias',
+		),
+		array(
+			'slug'  => 'gerador-lotomania',
+			'label' => 'Gerador de Jogos Lotomania',
+			'cat'   => 'Loterias',
+		),
+		array(
 			'slug'  => 'gerador-diadesorte',
 			'label' => 'Gerador Dia de Sorte',
 			'cat'   => 'Loterias',
@@ -871,16 +922,6 @@ function vfcw_calculadoras() {
 		array(
 			'slug'  => 'gerador-loteca',
 			'label' => 'Gerador Loteca',
-			'cat'   => 'Loterias',
-		),
-		array(
-			'slug'  => 'gerador-lotofacil',
-			'label' => 'Gerador Lotofácil',
-			'cat'   => 'Loterias',
-		),
-		array(
-			'slug'  => 'gerador-lotomania',
-			'label' => 'Gerador Lotomania',
 			'cat'   => 'Loterias',
 		),
 		array(
@@ -999,6 +1040,11 @@ function vfcw_calculadoras() {
 			'cat'   => 'Matemática',
 		),
 		array(
+			'slug'  => 'calculadora-contagem-regressiva',
+			'label' => 'Contagem Regressiva',
+			'cat'   => 'Matemática',
+		),
+		array(
 			'slug'  => 'conversor-de-unidades',
 			'label' => 'Conversor de Unidades',
 			'cat'   => 'Matemática',
@@ -1021,6 +1067,11 @@ function vfcw_calculadoras() {
 		array(
 			'slug'  => 'calculadora-dias-entre-datas',
 			'label' => 'Dias entre Datas',
+			'cat'   => 'Matemática',
+		),
+		array(
+			'slug'  => 'calculadora-dias-uteis',
+			'label' => 'Dias Úteis',
 			'cat'   => 'Matemática',
 		),
 		array(
@@ -1124,11 +1175,6 @@ function vfcw_calculadoras() {
 			'cat'   => 'Matemática',
 		),
 		array(
-			'slug'  => 'calculadora-lei-senos-cossenos',
-			'label' => 'Lei senos e cossenos',
-			'cat'   => 'Matemática',
-		),
-		array(
 			'slug'  => 'calculadora-logaritmo',
 			'label' => 'Logaritmo',
 			'cat'   => 'Matemática',
@@ -1176,6 +1222,11 @@ function vfcw_calculadoras() {
 		array(
 			'slug'  => 'calculadora-multiplos',
 			'label' => 'Múltiplos',
+			'cat'   => 'Matemática',
+		),
+		array(
+			'slug'  => 'calculadora-nota-para-passar',
+			'label' => 'Nota para Passar',
 			'cat'   => 'Matemática',
 		),
 		array(
@@ -1229,11 +1280,6 @@ function vfcw_calculadoras() {
 			'cat'   => 'Matemática',
 		),
 		array(
-			'slug'  => 'calculadora-preco-unitario',
-			'label' => 'Preço unitário',
-			'cat'   => 'Matemática',
-		),
-		array(
 			'slug'  => 'calculadora-probabilidade',
 			'label' => 'Probabilidade',
 			'cat'   => 'Matemática',
@@ -1276,11 +1322,6 @@ function vfcw_calculadoras() {
 		array(
 			'slug'  => 'calculadora-pitagoras',
 			'label' => 'Teorema de Pitágoras',
-			'cat'   => 'Matemática',
-		),
-		array(
-			'slug'  => 'calculadora-trigonometria',
-			'label' => 'Trigonometria',
 			'cat'   => 'Matemática',
 		),
 		array(
@@ -1549,6 +1590,11 @@ function vfcw_calculadoras() {
 			'cat'   => 'Tecnologia',
 		),
 		array(
+			'slug'  => 'contador-de-caracteres',
+			'label' => 'Contador de Caracteres',
+			'cat'   => 'Tecnologia',
+		),
+		array(
 			'slug'  => 'calculadora-binario-decimal-hexadecimal',
 			'label' => 'Conversor de Bases',
 			'cat'   => 'Tecnologia',
@@ -1556,6 +1602,11 @@ function vfcw_calculadoras() {
 		array(
 			'slug'  => 'calculadora-conversor-dados',
 			'label' => 'Conversor de Dados',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'gerador-cpf-cnpj',
+			'label' => 'CPF e CNPJ para Teste',
 			'cat'   => 'Tecnologia',
 		),
 		array(
@@ -1594,8 +1645,18 @@ function vfcw_calculadoras() {
 			'cat'   => 'Tecnologia',
 		),
 		array(
+			'slug'  => 'gerador-link-whatsapp',
+			'label' => 'Link do WhatsApp',
+			'cat'   => 'Tecnologia',
+		),
+		array(
 			'slug'  => 'calculadora-markdown-preview',
 			'label' => 'Markdown Preview',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'meu-ip',
+			'label' => 'Meu IP',
 			'cat'   => 'Tecnologia',
 		),
 		array(

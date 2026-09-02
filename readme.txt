@@ -4,11 +4,11 @@ Tags: calculadora, widget, brasileirao, cotacao, loterias
 Requires at least: 5.8
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.3.0
+Stable tag: 1.4.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Tabela e jogos do Brasileirão ao vivo, dólar, Selic, Bitcoin, loterias e 395 calculadoras no seu WordPress. Bloco, shortcode e widget. Grátis.
+Tabela e jogos do Brasileirão ao vivo, dólar, Selic, Bitcoin, loterias e mais de 400 calculadoras no seu WordPress. Bloco, shortcode e widget. Grátis.
 
 == Description ==
 
@@ -36,9 +36,9 @@ Você cola uma vez e o widget acompanha a temporada inteira sozinho.
 
 * Último resultado da Mega-Sena, Quina, Lotofácil, Lotomania e +Milionária.
 
-= 395 calculadoras =
+= Mais de 400 calculadoras =
 
-* Mais de 390 calculadoras do ValorFinal (rescisão CLT, salário líquido, INSS, financiamento, IMC e muitas outras) pelo slug da ferramenta, com busca direto no editor. Catálogo completo: https://valorfinal.com.br/embed
+* Mais de 400 calculadoras do ValorFinal (rescisão CLT, salário líquido, INSS, financiamento, IMC e muitas outras) pelo slug da ferramenta, com busca direto no editor. Catálogo completo: https://valorfinal.com.br/embed
 
 = Como usar =
 
@@ -106,7 +106,7 @@ Não. Ele vem **desligado por padrão** e é totalmente opcional. Você pode lig
 
 = Quais widgets estão disponíveis? =
 
-Tabela e jogos do Brasileirão, jogos da Copa, dólar e euro, Selic e CDI, IPCA, poupança, Bitcoin, conversor de moedas, indicadores econômicos, resultados de loterias e 395 calculadoras. Veja todos em https://valorfinal.com.br/embed
+Tabela e jogos do Brasileirão, jogos da Copa, dólar e euro, Selic e CDI, IPCA, poupança, Bitcoin, conversor de moedas, indicadores econômicos, resultados de loterias e mais de 400 calculadoras. Veja todos em https://valorfinal.com.br/embed
 
 = É grátis para uso comercial? =
 
@@ -121,10 +121,19 @@ Para dúvidas do plugin, use o fórum de suporte aqui do diretório. Para pedir 
 1. Tabela do Brasileirão Série A ao vivo, incorporada num post.
 2. O bloco "ValorFinal: widget" no editor, com prévia e as opções de tema, cor e largura.
 3. Jogos do Brasileirão de hoje, com placar ao vivo e horário de Brasília.
-4. Seletor pesquisável: digite para achar uma das 395 calculadoras.
+4. Seletor pesquisável: digite para achar uma das mais de 400 calculadoras.
 5. Widget financeiro de cotação do dólar e do euro.
 
 == Changelog ==
+
+= 1.4.1 =
+* Catálogo do seletor com mais de 400 calculadoras, gerado da mesma lista que o site usa. O número anunciado nesta página passa a sair dessa lista, e não mais escrito à mão.
+* Esta é a primeira versão publicada no diretório depois da 1.3.0: ela leva a correção da 1.4.0, que ficou só no repositório. Quem usa a 1.3.0 e liga o crédito ainda emite o link seguido; atualizar resolve.
+* Nenhuma mudança em shortcode, atributos, bloco ou aparência.
+
+= 1.4.0 =
+* O link do crédito ao ValorFinal passou a sair com rel="nofollow". O crédito continua opcional (vem desligado por padrão) e continua aparecendo igual para o leitor; a mudança é só técnica, para deixar claro que usar o plugin não obriga o seu site a transmitir autoridade de busca para o ValorFinal, seguindo as diretrizes do Google sobre links em widgets distribuídos.
+* Nenhuma mudança em shortcode, atributos, bloco ou aparência: quem já usa o plugin não precisa mexer em nada.
 
 = 1.3.0 =
 * Novo widget de cotação de moedas: mais de 50 moedas em tempo real (dólar, euro, libra, iene, franco suíço, pesos dos vizinhos, lira turca e outras), além de ouro, prata e criptomoedas. No editor, digite o nome da moeda no seletor pesquisável; no shortcode, use [valorfinal widget="moeda" par="EUR-BRL"].
@@ -157,6 +166,9 @@ Para dúvidas do plugin, use o fórum de suporte aqui do diretório. Para pedir 
 * Opções de tema, cor, largura, título e crédito. Ajuste de altura automático e seguro.
 
 == Upgrade Notice ==
+
+= 1.4.1 =
+Catálogo com mais de 400 calculadoras e o link de crédito (opcional) com rel="nofollow". Nada muda em shortcode, bloco ou aparência.
 
 = 1.2.0 =
 Página do diretório em português, banner e capturas corrigidos e catálogo com 395 calculadoras.
