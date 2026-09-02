@@ -4,7 +4,7 @@ Tags: calculadora, widget, brasileirao, cotacao, loterias
 Requires at least: 5.8
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 1.4.1
+Stable tag: 1.5.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,6 +15,8 @@ Tabela e jogos do Brasileirão ao vivo, dólar, Selic, Bitcoin, loterias e mais 
 Coloque widgets gratuitos e sempre atualizados do **ValorFinal** (https://valorfinal.com.br) no seu site WordPress em um clique. Você escolhe o widget, ajusta o tema e a cor, e pronto: o conteúdo se atualiza sozinho, sem nada para manter.
 
 Feito para blogs de torcida, sites de esporte, portais de finanças, escritórios de contabilidade e qualquer site que queira mostrar dados ao vivo ou uma calculadora útil.
+
+Depois de ativar, abra **ValorFinal** no menu lateral do painel. Lá estão todos os widgets em uma lista com busca: você escolhe um, vê o preview funcionando de verdade, ajusta tema, cor e largura, e copia o código pronto. Quem prefere o editor de blocos pode usar o bloco "ValorFinal: widget", que tem os mesmos ajustes.
 
 O ValorFinal é um portal brasileiro de calculadoras e ferramentas gratuitas, mantido pela GUARDIASEC LTDA. Este plugin incorpora os widgets públicos do portal por iframe; ele não processa nem armazena nenhum dado remoto.
 
@@ -126,6 +128,12 @@ Para dúvidas do plugin, use o fórum de suporte aqui do diretório. Para pedir 
 
 == Changelog ==
 
+= 1.5.0 =
+* Nova tela "ValorFinal" no menu lateral do painel: uma vitrine com todos os widgets, busca por nome, preview ao vivo e o código pronto para copiar, em shortcode e em HTML. Até agora o plugin não mostrava nada depois de ativado, e era preciso sair do WordPress e ler a documentação para descobrir como usar.
+* O preview da vitrine é gerado pelo mesmo código que publica o widget no seu site. O que aparece na tela é exatamente o que vai ao ar, inclusive o rel="nofollow" do crédito.
+* Novo atalho "Escolher um widget" na lista de plugins, que abre a vitrine direto.
+* Nenhuma mudança em shortcode, atributos, bloco ou aparência dos widgets já publicados.
+
 = 1.4.1 =
 * Catálogo do seletor com mais de 400 calculadoras, gerado da mesma lista que o site usa. O número anunciado nesta página passa a sair dessa lista, e não mais escrito à mão.
 * Esta é a primeira versão publicada no diretório depois da 1.3.0: ela leva a correção da 1.4.0, que ficou só no repositório. Quem usa a 1.3.0 e liga o crédito ainda emite o link seguido; atualizar resolve.
@@ -162,10 +170,13 @@ Para dúvidas do plugin, use o fórum de suporte aqui do diretório. Para pedir 
 * Versão inicial: bloco, shortcode e widget clássico.
 * Widgets de futebol ao vivo (tabela e jogos do Brasileirão, jogos da Copa).
 * Widgets financeiros (dólar, Selic e CDI, IPCA, poupança, Bitcoin, conversor, indicadores).
-* Resultados de loterias e mais de 200 calculadoras.
+* Resultados de loterias e mais de 400 calculadoras.
 * Opções de tema, cor, largura, título e crédito. Ajuste de altura automático e seguro.
 
 == Upgrade Notice ==
+
+= 1.5.0 =
+Nova tela no painel com busca, preview ao vivo e código pronto para copiar. Nada muda nos widgets que você já publicou.
 
 = 1.4.1 =
 Catálogo com mais de 400 calculadoras e o link de crédito (opcional) com rel="nofollow". Nada muda em shortcode, bloco ou aparência.

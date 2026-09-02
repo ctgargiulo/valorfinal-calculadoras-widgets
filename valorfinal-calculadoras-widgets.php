@@ -2,8 +2,8 @@
 /**
  * Plugin Name:       ValorFinal: Calculadoras e Widgets
  * Plugin URI:        https://valorfinal.com.br/embed/wordpress
- * Description:        Adicione widgets ao vivo do ValorFinal ao seu site: tabela e jogos do Brasileirão, cotação do dólar, Selic, CDI, Bitcoin, resultados das loterias e mais de 390 calculadoras. Bloco, shortcode e widget. Atualiza sozinho, de graça.
- * Version:           1.4.1
+ * Description:        Adicione widgets ao vivo do ValorFinal ao seu site: tabela e jogos do Brasileirão, cotação do dólar, Selic, CDI, Bitcoin, resultados das loterias e mais de 400 calculadoras. Bloco, shortcode e widget. Atualiza sozinho, de graça.
+ * Version:           1.5.0
  * Requires at least: 5.8
  * Requires PHP:      7.2
  * Author:            ValorFinal
@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'VFCW_VERSION', '1.4.1' );
+define( 'VFCW_VERSION', '1.5.0' );
 define( 'VFCW_FILE', __FILE__ );
 define( 'VFCW_DIR', plugin_dir_path( __FILE__ ) );
 define( 'VFCW_URL', plugin_dir_url( __FILE__ ) );
@@ -38,6 +38,12 @@ require_once VFCW_DIR . 'includes/render.php';
 require_once VFCW_DIR . 'includes/shortcode.php';
 require_once VFCW_DIR . 'includes/block.php';
 require_once VFCW_DIR . 'includes/class-vfcw-widget.php';
+
+// Vitrine no painel: so faz sentido no admin (e no admin-ajax, que tambem
+// satisfaz is_admin()). No front-end o arquivo nem e lido.
+if ( is_admin() ) {
+	require_once VFCW_DIR . 'includes/admin.php';
+}
 
 /** Registra o widget classico. */
 function vfcw_register_widget() {
@@ -63,17 +69,29 @@ function vfcw_register_assets() {
 add_action( 'init', 'vfcw_register_assets' );
 
 /**
- * Atalho "Como usar" na lista de plugins (leva a documentacao oficial, com o
- * passo a passo do bloco, do shortcode e do widget classico).
+ * Atalhos na lista de plugins.
+ *
+ * O primeiro leva a vitrine dentro do painel, onde da para escolher o widget,
+ * ver o preview e copiar o codigo. Ate a 1.4.1 o unico atalho jogava a pessoa
+ * para fora do WordPress, o que explicava boa parte de quem instalava e nao
+ * usava. O link da documentacao continua, agora em segundo lugar.
  *
  * @param array<int,string> $links Links de acao existentes.
- * @return array<int,string> Links com o atalho no inicio.
+ * @return array<int,string> Links com os atalhos no inicio.
  */
 function vfcw_action_links( $links ) {
 	$doc = '<a href="https://valorfinal.com.br/embed/wordpress" target="_blank" rel="noopener">'
 		. esc_html__( 'Como usar', 'valorfinal-calculadoras-widgets' )
 		. '</a>';
 	array_unshift( $links, $doc );
+
+	if ( defined( 'VFCW_ADMIN_SLUG' ) ) {
+		$vitrine = '<a href="' . esc_url( admin_url( 'admin.php?page=' . VFCW_ADMIN_SLUG ) ) . '">'
+			. esc_html__( 'Escolher um widget', 'valorfinal-calculadoras-widgets' )
+			. '</a>';
+		array_unshift( $links, $vitrine );
+	}
+
 	return $links;
 }
 add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'vfcw_action_links' );
