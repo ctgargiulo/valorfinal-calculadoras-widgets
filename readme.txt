@@ -2,13 +2,13 @@
 Contributors: ctgargiulo01
 Tags: calculadora, widget, brasileirao, cotacao, loterias
 Requires at least: 5.8
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.2
-Stable tag: 1.5.0
+Stable tag: 1.5.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Tabela e jogos do Brasileirão ao vivo, dólar, Selic, Bitcoin, loterias e mais de 400 calculadoras no seu WordPress. Bloco, shortcode e widget. Grátis.
+Tabela e jogos do Brasileirão ao vivo, dólar, Selic, Bitcoin, loterias e mais de 450 calculadoras no seu WordPress. Bloco, shortcode e widget. Grátis.
 
 == Description ==
 
@@ -38,9 +38,9 @@ Você cola uma vez e o widget acompanha a temporada inteira sozinho.
 
 * Último resultado da Mega-Sena, Quina, Lotofácil, Lotomania e +Milionária.
 
-= Mais de 400 calculadoras =
+= Mais de 450 calculadoras =
 
-* Mais de 400 calculadoras do ValorFinal (rescisão CLT, salário líquido, INSS, financiamento, IMC e muitas outras) pelo slug da ferramenta, com busca direto no editor. Catálogo completo: https://valorfinal.com.br/embed
+* Mais de 450 calculadoras do ValorFinal (rescisão CLT, salário líquido, INSS, financiamento, IMC e muitas outras) pelo slug da ferramenta, com busca direto no editor. Catálogo completo: https://valorfinal.com.br/embed
 
 = Como usar =
 
@@ -108,7 +108,7 @@ Não. Ele vem **desligado por padrão** e é totalmente opcional. Você pode lig
 
 = Quais widgets estão disponíveis? =
 
-Tabela e jogos do Brasileirão, jogos da Copa, dólar e euro, Selic e CDI, IPCA, poupança, Bitcoin, conversor de moedas, indicadores econômicos, resultados de loterias e mais de 400 calculadoras. Veja todos em https://valorfinal.com.br/embed
+Tabela e jogos do Brasileirão, jogos da Copa, dólar e euro, Selic e CDI, IPCA, poupança, Bitcoin, conversor de moedas, indicadores econômicos, resultados de loterias e mais de 450 calculadoras. Veja todos em https://valorfinal.com.br/embed
 
 = É grátis para uso comercial? =
 
@@ -123,10 +123,20 @@ Para dúvidas do plugin, use o fórum de suporte aqui do diretório. Para pedir 
 1. Tabela do Brasileirão Série A ao vivo, incorporada num post.
 2. O bloco "ValorFinal: widget" no editor, com prévia e as opções de tema, cor e largura.
 3. Jogos do Brasileirão de hoje, com placar ao vivo e horário de Brasília.
-4. Seletor pesquisável: digite para achar uma das mais de 400 calculadoras.
+4. Seletor pesquisável: digite para achar uma das mais de 450 calculadoras.
 5. Widget financeiro de cotação do dólar e do euro.
 
 == Changelog ==
+
+= 1.5.1 =
+* Catálogo do seletor passa de 407 para 473 calculadoras: são 66 novas, todas no bloco e na vitrine do painel.
+* Saúde: glicemia e hemoglobina glicada, pressão arterial, taxa de filtração glomerular, gotejamento de soro e semanas de gestação em meses.
+* Trabalhista: horas, tempo de serviço, INSS atrasado, PLR dos bancários, salário anual líquido, salário e custo da doméstica, conferência do FGTS e da rescisão.
+* Matemática: trigonometria, lei dos senos e cossenos, fatoração algébrica, tabela verdade, média geométrica, polígono irregular, preço unitário e simulador do Sisu.
+* Investimentos e finanças: Tesouro Reserva, Tesouro Renda+, Tesouro Educa+, indicadores de ações, calculadora financeira e simulador de consignado.
+* Casa e Cozinha e Tecnologia: comida por pessoa, feijoada, conversões de cozinha, cronômetro, temporizador, sorteador, QR Code Pix, código Morse e outras ferramentas.
+* Testado com o WordPress 7.1.
+* Nenhuma mudança em shortcode, atributos, bloco ou aparência dos widgets já publicados.
 
 = 1.5.0 =
 * Nova tela "ValorFinal" no menu lateral do painel: uma vitrine com todos os widgets, busca por nome, preview ao vivo e o código pronto para copiar, em shortcode e em HTML. Até agora o plugin não mostrava nada depois de ativado, e era preciso sair do WordPress e ler a documentação para descobrir como usar.
@@ -174,6 +184,9 @@ Para dúvidas do plugin, use o fórum de suporte aqui do diretório. Para pedir 
 * Opções de tema, cor, largura, título e crédito. Ajuste de altura automático e seguro.
 
 == Upgrade Notice ==
+
+= 1.5.1 =
+Catálogo com 66 calculadoras novas, de 407 para 473, entre elas glicemia, pressão arterial, trigonometria e Tesouro Reserva. Nada muda nos widgets que você já publicou.
 
 = 1.5.0 =
 Nova tela no painel com busca, preview ao vivo e código pronto para copiar. Nada muda nos widgets que você já publicou.

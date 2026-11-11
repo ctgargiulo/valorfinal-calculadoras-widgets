@@ -25,8 +25,33 @@ function vfcw_calculadoras() {
 			'cat'   => 'Casa e Cozinha',
 		),
 		array(
+			'slug'  => 'calculadora-bolo-festa',
+			'label' => 'Bolo por Pessoa',
+			'cat'   => 'Casa e Cozinha',
+		),
+		array(
 			'slug'  => 'calculadora-churrasco',
 			'label' => 'Churrasco',
+			'cat'   => 'Casa e Cozinha',
+		),
+		array(
+			'slug'  => 'quantos-gramas-tem-uma-colher-de-sopa',
+			'label' => 'Colher de Sopa em Gramas',
+			'cat'   => 'Casa e Cozinha',
+		),
+		array(
+			'slug'  => 'calculadora-comida-por-pessoa',
+			'label' => 'Comida por Pessoa',
+			'cat'   => 'Casa e Cozinha',
+		),
+		array(
+			'slug'  => 'quantos-ml-tem-um-copo-americano',
+			'label' => 'Copo Americano em ml',
+			'cat'   => 'Casa e Cozinha',
+		),
+		array(
+			'slug'  => 'calculadora-feijoada',
+			'label' => 'Feijoada',
 			'cat'   => 'Casa e Cozinha',
 		),
 		array(
@@ -35,8 +60,23 @@ function vfcw_calculadoras() {
 			'cat'   => 'Casa e Cozinha',
 		),
 		array(
+			'slug'  => 'conversor-gramas-ml',
+			'label' => 'ml para Gramas',
+			'cat'   => 'Casa e Cozinha',
+		),
+		array(
 			'slug'  => 'calculadora-pizza-festa',
 			'label' => 'Pizza para Festa',
+			'cat'   => 'Casa e Cozinha',
+		),
+		array(
+			'slug'  => 'calculadora-festa',
+			'label' => 'Salgados e Docinhos',
+			'cat'   => 'Casa e Cozinha',
+		),
+		array(
+			'slug'  => 'tempo-de-cozimento-do-ovo',
+			'label' => 'Tempo do Ovo Cozido',
 			'cat'   => 'Casa e Cozinha',
 		),
 		array(
@@ -80,6 +120,11 @@ function vfcw_calculadoras() {
 			'cat'   => 'Engenharia',
 		),
 		array(
+			'slug'  => 'calculadora-metro-quadrado',
+			'label' => 'Metro quadrado e piso',
+			'cat'   => 'Engenharia',
+		),
+		array(
 			'slug'  => 'calculadora-queda-tensao',
 			'label' => 'Queda de Tensão',
 			'cat'   => 'Engenharia',
@@ -105,6 +150,11 @@ function vfcw_calculadoras() {
 			'cat'   => 'Financeiro',
 		),
 		array(
+			'slug'  => 'calculadora-financeira',
+			'label' => 'Calculadora Financeira',
+			'cat'   => 'Financeiro',
+		),
+		array(
 			'slug'  => 'cambio',
 			'label' => 'Câmbio Hoje',
 			'cat'   => 'Financeiro',
@@ -121,7 +171,7 @@ function vfcw_calculadoras() {
 		),
 		array(
 			'slug'  => 'calculadora-consorcio-vs-financiamento',
-			'label' => 'Consórcio vs Financiamento',
+			'label' => 'Consórcio ou Financiamento',
 			'cat'   => 'Financeiro',
 		),
 		array(
@@ -145,8 +195,8 @@ function vfcw_calculadoras() {
 			'cat'   => 'Financeiro',
 		),
 		array(
-			'slug'  => 'calculadora-emprestimo-pessoal',
-			'label' => 'Empréstimo Pessoal',
+			'slug'  => 'diagnostico-financeiro',
+			'label' => 'Diagnóstico Financeiro',
 			'cat'   => 'Financeiro',
 		),
 		array(
@@ -156,7 +206,7 @@ function vfcw_calculadoras() {
 		),
 		array(
 			'slug'  => 'calculadora-financiamento-vs-a-vista',
-			'label' => 'Financiamento vs À Vista',
+			'label' => 'Financiar ou Pagar à Vista',
 			'cat'   => 'Financeiro',
 		),
 		array(
@@ -170,6 +220,11 @@ function vfcw_calculadoras() {
 			'cat'   => 'Financeiro',
 		),
 		array(
+			'slug'  => 'minha-taxa-de-emprestimo-esta-cara',
+			'label' => 'Juros Abusivos',
+			'cat'   => 'Financeiro',
+		),
+		array(
 			'slug'  => 'calculadora-juros-compostos',
 			'label' => 'Juros Compostos',
 			'cat'   => 'Financeiro',
@@ -177,11 +232,6 @@ function vfcw_calculadoras() {
 		array(
 			'slug'  => 'calculadora-juros-cartao-credito',
 			'label' => 'Juros do Cartão',
-			'cat'   => 'Financeiro',
-		),
-		array(
-			'slug'  => 'juros-do-credito-hoje',
-			'label' => 'Juros do Crédito Hoje',
 			'cat'   => 'Financeiro',
 		),
 		array(
@@ -210,18 +260,13 @@ function vfcw_calculadoras() {
 			'cat'   => 'Financeiro',
 		),
 		array(
-			'slug'  => 'quanto-rende-hoje',
-			'label' => 'Quanto Rende Hoje',
-			'cat'   => 'Financeiro',
-		),
-		array(
 			'slug'  => 'calculadora-quitacao-antecipada',
 			'label' => 'Quitação Antecipada',
 			'cat'   => 'Financeiro',
 		),
 		array(
 			'slug'  => 'calculadora-renegociacao-dividas',
-			'label' => 'Quitação de Dívidas',
+			'label' => 'Quitar Dívidas',
 			'cat'   => 'Financeiro',
 		),
 		array(
@@ -235,33 +280,33 @@ function vfcw_calculadoras() {
 			'cat'   => 'Financeiro',
 		),
 		array(
-			'slug'  => 'retroativo-investimentos',
-			'label' => 'Retroativo de Investimentos',
-			'cat'   => 'Financeiro',
-		),
-		array(
 			'slug'  => 'taxa-cartao-rotativo-hoje',
 			'label' => 'Rotativo do Cartão Hoje',
 			'cat'   => 'Financeiro',
 		),
 		array(
+			'slug'  => 'simulador-emprestimo-consignado',
+			'label' => 'Simulador de Consignado',
+			'cat'   => 'Financeiro',
+		),
+		array(
+			'slug'  => 'calculadora-emprestimo-pessoal',
+			'label' => 'Simulador de Empréstimo',
+			'cat'   => 'Financeiro',
+		),
+		array(
 			'slug'  => 'calculadora-sac-price',
-			'label' => 'SAC x Price',
-			'cat'   => 'Financeiro',
-		),
-		array(
-			'slug'  => 'simulador-tesouro-direto',
-			'label' => 'Simulador Tesouro Direto',
-			'cat'   => 'Financeiro',
-		),
-		array(
-			'slug'  => 'minha-taxa-de-emprestimo-esta-cara',
-			'label' => 'Taxa de Empréstimo Cara?',
+			'label' => 'Simulador de Financiamento',
 			'cat'   => 'Financeiro',
 		),
 		array(
 			'slug'  => 'calculadora-taxa-equivalente',
 			'label' => 'Taxa Equivalente',
+			'cat'   => 'Financeiro',
+		),
+		array(
+			'slug'  => 'juros-do-credito-hoje',
+			'label' => 'Taxas de Juros Hoje',
 			'cat'   => 'Financeiro',
 		),
 		array(
@@ -317,6 +362,11 @@ function vfcw_calculadoras() {
 		array(
 			'slug'  => 'calculadora-garantias-aluguel',
 			'label' => 'Garantias de Aluguel',
+			'cat'   => 'Imóveis',
+		),
+		array(
+			'slug'  => 'incc-acumulado',
+			'label' => 'INCC Acumulado',
 			'cat'   => 'Imóveis',
 		),
 		array(
@@ -450,6 +500,11 @@ function vfcw_calculadoras() {
 			'cat'   => 'Investimentos',
 		),
 		array(
+			'slug'  => 'calculadora-indicadores-acoes',
+			'label' => 'Indicadores de ações',
+			'cat'   => 'Investimentos',
+		),
+		array(
 			'slug'  => 'calculadora-iof-renda-fixa',
 			'label' => 'IOF em renda fixa',
 			'cat'   => 'Investimentos',
@@ -495,6 +550,11 @@ function vfcw_calculadoras() {
 			'cat'   => 'Investimentos',
 		),
 		array(
+			'slug'  => 'quanto-rende-hoje',
+			'label' => 'Quanto Rende Hoje',
+			'cat'   => 'Investimentos',
+		),
+		array(
 			'slug'  => 'calculadora-rentabilidade-carteira',
 			'label' => 'Rentabilidade da Carteira',
 			'cat'   => 'Investimentos',
@@ -510,13 +570,38 @@ function vfcw_calculadoras() {
 			'cat'   => 'Investimentos',
 		),
 		array(
+			'slug'  => 'retroativo-investimentos',
+			'label' => 'Retroativo de Investimentos',
+			'cat'   => 'Investimentos',
+		),
+		array(
 			'slug'  => 'calculadora-simulador-aportes',
 			'label' => 'Simulador de Aportes',
 			'cat'   => 'Investimentos',
 		),
 		array(
+			'slug'  => 'simulador-tesouro-direto',
+			'label' => 'Simulador Tesouro Direto',
+			'cat'   => 'Investimentos',
+		),
+		array(
+			'slug'  => 'simulador-tesouro-educa-mais',
+			'label' => 'Tesouro Educa+',
+			'cat'   => 'Investimentos',
+		),
+		array(
 			'slug'  => 'calculadora-tesouro-ipca',
 			'label' => 'Tesouro IPCA',
+			'cat'   => 'Investimentos',
+		),
+		array(
+			'slug'  => 'simulador-tesouro-renda-mais',
+			'label' => 'Tesouro Renda+',
+			'cat'   => 'Investimentos',
+		),
+		array(
+			'slug'  => 'simulador-tesouro-reserva',
+			'label' => 'Tesouro Reserva',
 			'cat'   => 'Investimentos',
 		),
 		array(
@@ -617,51 +702,6 @@ function vfcw_calculadoras() {
 		array(
 			'slug'  => 'comparar-jogos-lotomania',
 			'label' => 'Comparar Jogos Lotomania',
-			'cat'   => 'Loterias',
-		),
-		array(
-			'slug'  => 'conferir-lotofacil-historico',
-			'label' => 'Conferidor Histórico',
-			'cat'   => 'Loterias',
-		),
-		array(
-			'slug'  => 'conferir-maismilionaria-historico',
-			'label' => 'Conferidor Histórico +Milionária',
-			'cat'   => 'Loterias',
-		),
-		array(
-			'slug'  => 'conferir-diadesorte-historico',
-			'label' => 'Conferidor Histórico Dia de Sorte',
-			'cat'   => 'Loterias',
-		),
-		array(
-			'slug'  => 'conferir-duplasena-historico',
-			'label' => 'Conferidor Histórico Dupla Sena',
-			'cat'   => 'Loterias',
-		),
-		array(
-			'slug'  => 'conferir-lotomania-historico',
-			'label' => 'Conferidor Histórico Lotomania',
-			'cat'   => 'Loterias',
-		),
-		array(
-			'slug'  => 'conferir-megasena-historico',
-			'label' => 'Conferidor Histórico Mega-Sena',
-			'cat'   => 'Loterias',
-		),
-		array(
-			'slug'  => 'conferir-quina-historico',
-			'label' => 'Conferidor Histórico Quina',
-			'cat'   => 'Loterias',
-		),
-		array(
-			'slug'  => 'conferir-supersete-historico',
-			'label' => 'Conferidor Histórico Super Sete',
-			'cat'   => 'Loterias',
-		),
-		array(
-			'slug'  => 'conferir-timemania-historico',
-			'label' => 'Conferidor Histórico Timemania',
 			'cat'   => 'Loterias',
 		),
 		array(
@@ -767,6 +807,11 @@ function vfcw_calculadoras() {
 		array(
 			'slug'  => 'calculadora-desdobramento-quina',
 			'label' => 'Desdobramento Quina',
+			'cat'   => 'Loterias',
+		),
+		array(
+			'slug'  => 'calculadora-desdobramento-timemania',
+			'label' => 'Desdobramento Timemania',
 			'cat'   => 'Loterias',
 		),
 		array(
@@ -1000,6 +1045,51 @@ function vfcw_calculadoras() {
 			'cat'   => 'Loterias',
 		),
 		array(
+			'slug'  => 'conferir-maismilionaria-historico',
+			'label' => 'Simulador da +Milionária',
+			'cat'   => 'Loterias',
+		),
+		array(
+			'slug'  => 'conferir-duplasena-historico',
+			'label' => 'Simulador da Dupla Sena',
+			'cat'   => 'Loterias',
+		),
+		array(
+			'slug'  => 'conferir-lotofacil-historico',
+			'label' => 'Simulador da Lotofácil',
+			'cat'   => 'Loterias',
+		),
+		array(
+			'slug'  => 'conferir-lotomania-historico',
+			'label' => 'Simulador da Lotomania',
+			'cat'   => 'Loterias',
+		),
+		array(
+			'slug'  => 'conferir-megasena-historico',
+			'label' => 'Simulador da Mega-Sena',
+			'cat'   => 'Loterias',
+		),
+		array(
+			'slug'  => 'conferir-quina-historico',
+			'label' => 'Simulador da Quina',
+			'cat'   => 'Loterias',
+		),
+		array(
+			'slug'  => 'conferir-timemania-historico',
+			'label' => 'Simulador da Timemania',
+			'cat'   => 'Loterias',
+		),
+		array(
+			'slug'  => 'conferir-diadesorte-historico',
+			'label' => 'Simulador do Dia de Sorte',
+			'cat'   => 'Loterias',
+		),
+		array(
+			'slug'  => 'conferir-supersete-historico',
+			'label' => 'Simulador do Super Sete',
+			'cat'   => 'Loterias',
+		),
+		array(
 			'slug'  => 'calculadora-adicao-subtracao-longa',
 			'label' => 'Adição e subtração longa',
 			'cat'   => 'Matemática',
@@ -1090,6 +1180,11 @@ function vfcw_calculadoras() {
 			'cat'   => 'Matemática',
 		),
 		array(
+			'slug'  => 'calculadora-fatoracao-algebrica',
+			'label' => 'Fatoração algébrica',
+			'cat'   => 'Matemática',
+		),
+		array(
 			'slug'  => 'calculadora-fatoracao-prima',
 			'label' => 'Fatoração prima',
 			'cat'   => 'Matemática',
@@ -1175,6 +1270,11 @@ function vfcw_calculadoras() {
 			'cat'   => 'Matemática',
 		),
 		array(
+			'slug'  => 'calculadora-lei-senos-cossenos',
+			'label' => 'Lei senos e cossenos',
+			'cat'   => 'Matemática',
+		),
+		array(
 			'slug'  => 'calculadora-logaritmo',
 			'label' => 'Logaritmo',
 			'cat'   => 'Matemática',
@@ -1192,6 +1292,11 @@ function vfcw_calculadoras() {
 		array(
 			'slug'  => 'calculadora-media-fracoes',
 			'label' => 'Média de frações',
+			'cat'   => 'Matemática',
+		),
+		array(
+			'slug'  => 'calculadora-media-geometrica',
+			'label' => 'Média Geométrica',
 			'cat'   => 'Matemática',
 		),
 		array(
@@ -1270,6 +1375,16 @@ function vfcw_calculadoras() {
 			'cat'   => 'Matemática',
 		),
 		array(
+			'slug'  => 'calculadora-pace-corrida',
+			'label' => 'Pace de corrida',
+			'cat'   => 'Matemática',
+		),
+		array(
+			'slug'  => 'calculadora-poligono-irregular',
+			'label' => 'Polígono Irregular',
+			'cat'   => 'Matemática',
+		),
+		array(
 			'slug'  => 'calculadora-porcentagem-para-fracao',
 			'label' => 'Porcentagem para fração',
 			'cat'   => 'Matemática',
@@ -1277,6 +1392,11 @@ function vfcw_calculadoras() {
 		array(
 			'slug'  => 'calculadora-potencia-raiz',
 			'label' => 'Potência e Raiz',
+			'cat'   => 'Matemática',
+		),
+		array(
+			'slug'  => 'calculadora-preco-unitario',
+			'label' => 'Preço unitário',
 			'cat'   => 'Matemática',
 		),
 		array(
@@ -1295,6 +1415,11 @@ function vfcw_calculadoras() {
 			'cat'   => 'Matemática',
 		),
 		array(
+			'slug'  => 'calculadora-racionalizacao-de-denominadores',
+			'label' => 'Racionalização de denominadores',
+			'cat'   => 'Matemática',
+		),
+		array(
 			'slug'  => 'calculadora-razao',
 			'label' => 'Razão',
 			'cat'   => 'Matemática',
@@ -1310,8 +1435,18 @@ function vfcw_calculadoras() {
 			'cat'   => 'Matemática',
 		),
 		array(
+			'slug'  => 'simulador-sisu',
+			'label' => 'Simulador do Sisu',
+			'cat'   => 'Matemática',
+		),
+		array(
 			'slug'  => 'calculadora-sistemas-lineares',
 			'label' => 'Sistemas lineares',
+			'cat'   => 'Matemática',
+		),
+		array(
+			'slug'  => 'calculadora-tabela-verdade',
+			'label' => 'Tabela verdade',
 			'cat'   => 'Matemática',
 		),
 		array(
@@ -1322,6 +1457,11 @@ function vfcw_calculadoras() {
 		array(
 			'slug'  => 'calculadora-pitagoras',
 			'label' => 'Teorema de Pitágoras',
+			'cat'   => 'Matemática',
+		),
+		array(
+			'slug'  => 'calculadora-trigonometria',
+			'label' => 'Trigonometria',
 			'cat'   => 'Matemática',
 		),
 		array(
@@ -1545,8 +1685,18 @@ function vfcw_calculadoras() {
 			'cat'   => 'Saúde',
 		),
 		array(
+			'slug'  => 'calculadora-glicemia',
+			'label' => 'Glicemia e HbA1c',
+			'cat'   => 'Saúde',
+		),
+		array(
 			'slug'  => 'calculadora-gordura-corporal',
 			'label' => 'Gordura Corporal',
+			'cat'   => 'Saúde',
+		),
+		array(
+			'slug'  => 'calculadora-gotejamento',
+			'label' => 'Gotejamento',
 			'cat'   => 'Saúde',
 		),
 		array(
@@ -1575,48 +1725,113 @@ function vfcw_calculadoras() {
 			'cat'   => 'Saúde',
 		),
 		array(
+			'slug'  => 'calculadora-pressao-arterial',
+			'label' => 'Pressão Arterial',
+			'cat'   => 'Saúde',
+		),
+		array(
+			'slug'  => 'semanas-de-gestacao-em-meses',
+			'label' => 'Semanas em Meses',
+			'cat'   => 'Saúde',
+		),
+		array(
 			'slug'  => 'calculadora-sono',
 			'label' => 'Sono',
 			'cat'   => 'Saúde',
 		),
 		array(
+			'slug'  => 'calculadora-taxa-de-filtracao-glomerular',
+			'label' => 'Taxa de Filtração Glomerular',
+			'cat'   => 'Saúde',
+		),
+		array(
+			'slug'  => 'amigo-secreto',
+			'label' => 'Amigo secreto',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'calculadora-chmod',
+			'label' => 'Calculadora chmod',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'calculadora-subnet',
+			'label' => 'Calculadora de sub-rede IPv4',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'cara-ou-coroa',
+			'label' => 'Cara ou coroa',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'caractere-invisivel',
+			'label' => 'Caractere invisível',
+			'cat'   => 'Tecnologia',
+		),
+		array(
 			'slug'  => 'calculadora-base64',
-			'label' => 'Base64',
+			'label' => 'Codificador Base64',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'calculadora-url-encode-decode',
+			'label' => 'Codificar e decodificar URL',
 			'cat'   => 'Tecnologia',
 		),
 		array(
 			'slug'  => 'calculadora-diff-texto',
-			'label' => 'Comparador de Texto',
+			'label' => 'Comparador de texto',
 			'cat'   => 'Tecnologia',
 		),
 		array(
 			'slug'  => 'contador-de-caracteres',
-			'label' => 'Contador de Caracteres',
+			'label' => 'Contador de caracteres',
 			'cat'   => 'Tecnologia',
 		),
 		array(
 			'slug'  => 'calculadora-binario-decimal-hexadecimal',
-			'label' => 'Conversor de Bases',
+			'label' => 'Conversor binário, decimal e hexadecimal',
 			'cat'   => 'Tecnologia',
 		),
 		array(
 			'slug'  => 'calculadora-conversor-dados',
-			'label' => 'Conversor de Dados',
+			'label' => 'Conversor de dados',
 			'cat'   => 'Tecnologia',
 		),
 		array(
-			'slug'  => 'gerador-cpf-cnpj',
-			'label' => 'CPF e CNPJ para Teste',
+			'slug'  => 'converter-px-para-rem',
+			'label' => 'Conversor de px para rem',
 			'cat'   => 'Tecnologia',
 		),
 		array(
-			'slug'  => 'calculadora-cron',
-			'label' => 'Cron',
+			'slug'  => 'calculadora-timestamp-unix',
+			'label' => 'Conversor de timestamp Unix',
 			'cat'   => 'Tecnologia',
 		),
 		array(
-			'slug'  => 'calculadora-ferramentas-css',
-			'label' => 'Ferramentas CSS',
+			'slug'  => 'cronometro-online',
+			'label' => 'Cronômetro online',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'converter-csv-para-json',
+			'label' => 'CSV para JSON',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'dado-online',
+			'label' => 'Dado online',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'calculadora-jwt',
+			'label' => 'Decodificador de JWT',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'calculadora-markdown-preview',
+			'label' => 'Editor de Markdown',
 			'cat'   => 'Tecnologia',
 		),
 		array(
@@ -1626,32 +1841,77 @@ function vfcw_calculadoras() {
 		),
 		array(
 			'slug'  => 'calculadora-formatador-codigo',
-			'label' => 'Formatador de Código',
-			'cat'   => 'Tecnologia',
-		),
-		array(
-			'slug'  => 'calculadora-hash',
-			'label' => 'Hash SHA',
+			'label' => 'Formatador de código',
 			'cat'   => 'Tecnologia',
 		),
 		array(
 			'slug'  => 'calculadora-json',
-			'label' => 'JSON Formatter',
+			'label' => 'Formatador de JSON',
 			'cat'   => 'Tecnologia',
 		),
 		array(
-			'slug'  => 'calculadora-jwt',
-			'label' => 'JWT Decoder',
+			'slug'  => 'gerador-codigo-de-barras',
+			'label' => 'Gerador de código de barras',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'gerador-cpf-cnpj',
+			'label' => 'Gerador de CPF e CNPJ',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'calculadora-hash',
+			'label' => 'Gerador de hash SHA',
 			'cat'   => 'Tecnologia',
 		),
 		array(
 			'slug'  => 'gerador-link-whatsapp',
-			'label' => 'Link do WhatsApp',
+			'label' => 'Gerador de link do WhatsApp',
 			'cat'   => 'Tecnologia',
 		),
 		array(
-			'slug'  => 'calculadora-markdown-preview',
-			'label' => 'Markdown Preview',
+			'slug'  => 'calculadora-qr-code',
+			'label' => 'Gerador de QR Code',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'calculadora-senha-forte',
+			'label' => 'Gerador de Senha',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'calculadora-uuid',
+			'label' => 'Gerador de UUID',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'verificar-hash-de-arquivo',
+			'label' => 'Hash de arquivo',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'horario-de-brasilia',
+			'label' => 'Horário de Brasília',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'horario-de-portugal',
+			'label' => 'Horário de Portugal',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'calculadora-cron',
+			'label' => 'Interpretador de cron',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'letras-diferentes',
+			'label' => 'Letras diferentes',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'converter-maiusculas-minusculas',
+			'label' => 'Maiúsculas e minúsculas',
 			'cat'   => 'Tecnologia',
 		),
 		array(
@@ -1660,43 +1920,68 @@ function vfcw_calculadoras() {
 			'cat'   => 'Tecnologia',
 		),
 		array(
-			'slug'  => 'calculadora-qr-code',
-			'label' => 'QR Code',
+			'slug'  => 'gerador-qr-code-pix',
+			'label' => 'QR Code Pix',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'roleta-de-sorteio',
+			'label' => 'Roleta de sorteio',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'calculadora-ferramentas-css',
+			'label' => 'Seletor de cores e ferramentas CSS',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'simbolos-para-copiar',
+			'label' => 'Símbolos para copiar',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'sorteador',
+			'label' => 'Sorteador online',
+			'cat'   => 'Tecnologia',
+		),
+		array(
+			'slug'  => 'temporizador-online',
+			'label' => 'Temporizador online',
 			'cat'   => 'Tecnologia',
 		),
 		array(
 			'slug'  => 'calculadora-regex',
-			'label' => 'Regex Tester',
+			'label' => 'Testador de regex',
 			'cat'   => 'Tecnologia',
 		),
 		array(
-			'slug'  => 'calculadora-senha-forte',
-			'label' => 'Senha Forte',
+			'slug'  => 'teste-de-digitacao',
+			'label' => 'Teste de digitação',
 			'cat'   => 'Tecnologia',
 		),
 		array(
-			'slug'  => 'calculadora-subnet',
-			'label' => 'Subnet IPv4',
+			'slug'  => 'teste-de-teclado',
+			'label' => 'Teste de teclado',
 			'cat'   => 'Tecnologia',
 		),
 		array(
-			'slug'  => 'calculadora-timestamp-unix',
-			'label' => 'Timestamp Unix',
+			'slug'  => 'pomodoro',
+			'label' => 'Timer Pomodoro',
 			'cat'   => 'Tecnologia',
 		),
 		array(
-			'slug'  => 'calculadora-url-encode-decode',
-			'label' => 'URL Encode/Decode',
-			'cat'   => 'Tecnologia',
-		),
-		array(
-			'slug'  => 'calculadora-uuid',
-			'label' => 'UUID',
+			'slug'  => 'tradutor-codigo-morse',
+			'label' => 'Tradutor de código Morse',
 			'cat'   => 'Tecnologia',
 		),
 		array(
 			'slug'  => 'calculadora-abono-salarial-pis-pasep',
 			'label' => 'Abono Salarial PIS/PASEP',
+			'cat'   => 'Trabalhista',
+		),
+		array(
+			'slug'  => 'meu-acerto',
+			'label' => 'Acerto Trabalhista',
 			'cat'   => 'Trabalhista',
 		),
 		array(
@@ -1750,13 +2035,33 @@ function vfcw_calculadoras() {
 			'cat'   => 'Trabalhista',
 		),
 		array(
+			'slug'  => 'calculadora-de-horas',
+			'label' => 'Calculadora de Horas',
+			'cat'   => 'Trabalhista',
+		),
+		array(
+			'slug'  => 'carta-de-pedido-de-demissao',
+			'label' => 'Carta de Pedido de Demissão',
+			'cat'   => 'Trabalhista',
+		),
+		array(
 			'slug'  => 'clt-vs-pj',
 			'label' => 'CLT vs PJ',
 			'cat'   => 'Trabalhista',
 		),
 		array(
+			'slug'  => 'conferir-fgts',
+			'label' => 'Conferir FGTS',
+			'cat'   => 'Trabalhista',
+		),
+		array(
 			'slug'  => 'conferir-holerite',
 			'label' => 'Conferir Holerite',
+			'cat'   => 'Trabalhista',
+		),
+		array(
+			'slug'  => 'conferir-rescisao',
+			'label' => 'Conferir Rescisão (TRCT)',
 			'cat'   => 'Trabalhista',
 		),
 		array(
@@ -1840,6 +2145,11 @@ function vfcw_calculadoras() {
 			'cat'   => 'Trabalhista',
 		),
 		array(
+			'slug'  => 'calculadora-inss-atrasado',
+			'label' => 'INSS Atrasado',
+			'cat'   => 'Trabalhista',
+		),
+		array(
 			'slug'  => 'calculadora-inss-autonomo',
 			'label' => 'INSS Autônomo',
 			'cat'   => 'Trabalhista',
@@ -1865,11 +2175,6 @@ function vfcw_calculadoras() {
 			'cat'   => 'Trabalhista',
 		),
 		array(
-			'slug'  => 'meu-acerto',
-			'label' => 'Meu Acerto',
-			'cat'   => 'Trabalhista',
-		),
-		array(
 			'slug'  => 'calculadora-multa-40-fgts',
 			'label' => 'Multa 40% FGTS',
 			'cat'   => 'Trabalhista',
@@ -1890,6 +2195,11 @@ function vfcw_calculadoras() {
 			'cat'   => 'Trabalhista',
 		),
 		array(
+			'slug'  => 'calculadora-plr-bancarios',
+			'label' => 'PLR dos Bancários',
+			'cat'   => 'Trabalhista',
+		),
+		array(
 			'slug'  => 'calculadora-gorjeta-rateio',
 			'label' => 'Rateio de Gorjetas',
 			'cat'   => 'Trabalhista',
@@ -1897,6 +2207,11 @@ function vfcw_calculadoras() {
 		array(
 			'slug'  => 'calculadora-reajuste-salarial-dissidio',
 			'label' => 'Reajuste Salarial',
+			'cat'   => 'Trabalhista',
+		),
+		array(
+			'slug'  => 'recibo-pagamento-empregada-domestica',
+			'label' => 'Recibo da Doméstica',
 			'cat'   => 'Trabalhista',
 		),
 		array(
@@ -1930,8 +2245,18 @@ function vfcw_calculadoras() {
 			'cat'   => 'Trabalhista',
 		),
 		array(
+			'slug'  => 'calculadora-salario-anual-liquido',
+			'label' => 'Salário Anual Líquido',
+			'cat'   => 'Trabalhista',
+		),
+		array(
 			'slug'  => 'calculadora-salario-bruto-a-partir-do-liquido',
 			'label' => 'Salário Bruto pelo Líquido',
+			'cat'   => 'Trabalhista',
+		),
+		array(
+			'slug'  => 'calculadora-salario-empregada-domestica',
+			'label' => 'Salário e Custo da Doméstica',
 			'cat'   => 'Trabalhista',
 		),
 		array(
@@ -1972,6 +2297,11 @@ function vfcw_calculadoras() {
 		array(
 			'slug'  => 'calculadora-seguro-desemprego',
 			'label' => 'Seguro-Desemprego',
+			'cat'   => 'Trabalhista',
+		),
+		array(
+			'slug'  => 'calculadora-tempo-de-servico',
+			'label' => 'Tempo de Serviço',
 			'cat'   => 'Trabalhista',
 		),
 		array(
